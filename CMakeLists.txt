@@ -2,8 +2,9 @@ cmake_minimum_required(VERSION 2.8.10)
 
 # You can tweak some common (for all subprojects) stuff here. For example:
 
-set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
-set(CMAKE_DISABLE_SOURCE_CHANGES  ON)
+# In order to get libRootFftwWrapper to download its various dependencies you need to turn these off
+#set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
+#set(CMAKE_DISABLE_SOURCE_CHANGES  ON)
 set(CMAKE_BUILD_TYPE Debug)
 
 if ("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
