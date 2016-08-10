@@ -60,6 +60,12 @@ cmake 3.5.2
 fftw-3.3.4-7
 all installed via dnf from normal repositories 
 
+Centos 7 (64-bit) 
+--------------------------
+gcc 4.8.5 20150623 (Red Hat 4.8.5-4)
+ROOT 6.06/04
+cmake 2.8.11 
+all installed via yum from normal + epel repositories 
 
 
 
