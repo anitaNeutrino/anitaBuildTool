@@ -5,9 +5,9 @@
 
 
 
-.PHONY: all configure clean install legacy components build 
+.PHONY: all configure clean install distclean update build 
 
-all: build cmake
+all: build
 clean: cmake-clean
 install: cmake-install 
 
@@ -15,13 +15,11 @@ install: cmake-install
 ### TODO add doxygen into CMakelists 
 doc: legacy-doc
 
-build: build/Makefile cmake 
+build: build/Makefile 
 	@+make -C  ./build
 
-
-components: 
+update: 
 	./updateComponents.sh
-	rm -rf build
 
 configure: build/Makefile 
 	@ccmake . build 
@@ -37,6 +35,9 @@ build/Makefile:
 distclean: 
 	@echo "Removing cmake directory" 
 	@rm -rf build 
+	@rm -rf components
+	unlink cmake
+	unlink Makefile 
 
 cmake-clean: build/Makefile 
 	@make -C ./build clean 

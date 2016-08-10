@@ -1,8 +1,12 @@
 # anitaBuildTool
 A simple script to download and build the ANITA libraries
 
+
 In theory all one needs to do is make sure the ANITA_UTIL_INSTALL_DIR enviromental vairable is set and then type:
 ./buildAnita.sh
+
+This will build and install everything with the defaults
+
 
 The build script is not very sophisticated it will attempt to:
 1) Checkout the libraries from GitHub
@@ -16,6 +20,18 @@ FFTW http://www.fftw.org
 cmake https://cmake.org
 these should be available using your favourite package manager for your system.
 
+
+##############################################################################
+More advanced use 
+##############################################################################
+
+After buildAnita.sh is run once, more things are possible
+
+  - build without updating components (use convenience make file, or cd into build and Make). 
+
+  - configure some compile time parameters (you can use make configure to do this, or run ccmake inside the build directory). 
+    make and make install after. Note that doing a make update or running the build script will forget everything. 
+    If you find yourself doing this often, this tool is probably not for you. 
 
 ##############################################################################
 Known working systems
@@ -35,6 +51,17 @@ Scientific Linux release 6.7 (Carbon)
 gcc version 4.4.7 20120313
 ROOT -- 5.34/20
 cmake version 2.8.12.2
+
+Fedora 24  ( 64-bit) 
+---------------------------
+gcc 6.1.1 20160621 (Red Hat 6.1.1-3) 
+ROOT 6.06/06 
+cmake 3.5.2 
+fftw-3.3.4-7
+all installed via dnf from normal repositories 
+
+
+
 
 
 

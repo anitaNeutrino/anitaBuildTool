@@ -14,10 +14,12 @@ for repName in https://github.com/nichol77/libRootFftwWrapper.git https://github
     else
 	echo "Fetching $thisDir"
 	git clone $repName
-        touch ../updated 
     fi
 done
 cd ..
+
+### TODO: We should be able to tell if this is necessary or not... 
+rm -rf build 
 
 
 
