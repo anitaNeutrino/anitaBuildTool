@@ -35,7 +35,7 @@ build/Makefile:
 distclean: 
 	@echo "Removing cmake directory" 
 	@rm -rf build 
-	@rm -rf components
+	#	@rm -rf components ## too dangerous :) 
 	unlink cmake
 	unlink Makefile 
 

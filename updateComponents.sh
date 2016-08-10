@@ -2,8 +2,11 @@
 
 mkdir -p components
 cd components
+GH=https://github.com
+RN=$GH/nichol77
+AN=$GH/anitaNeutrino
 
-for repName in https://github.com/nichol77/libRootFftwWrapper.git https://github.com/anitaNeutrino/eventReaderRoot.git https://github.com/anitaNeutrino/anitaEventCorrelator.git https://github.com/anitaNeutrino/anitaAnalysisTools.git https://github.com/anitaNeutrino/anitaMagicDisplay.git; do
+for repName in $RN/libRootFftwWrapper.git $AN/eventReaderRoot.git $AN/anitaEventCorrelator.git $AN/anitaAnalysisTools.git $AN/anitaMagicDisplay.git $AN/AnitaAnalysisFramework $AN/UCorrelator; do
     thisDirWithGit=${repName##*/}
     thisDir=${thisDirWithGit%.*}
     if [ -d "$thisDir" ]; then

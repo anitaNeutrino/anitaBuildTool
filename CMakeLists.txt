@@ -5,7 +5,8 @@ cmake_minimum_required(VERSION 2.8.10)
 # In order to get libRootFftwWrapper to download its various dependencies you need to turn these off
 #set(CMAKE_DISABLE_IN_SOURCE_BUILD ON)
 #set(CMAKE_DISABLE_SOURCE_CHANGES  ON)
-set(CMAKE_BUILD_TYPE Debug)
+
+set(CMAKE_BUILD_TYPE RelWithDebInfo)
 
 if ("${CMAKE_SOURCE_DIR}" STREQUAL "${CMAKE_BINARY_DIR}")
   message(SEND_ERROR "In-source builds are not allowed.")
@@ -27,7 +28,7 @@ if (WIN32)
   set(CMAKE_SHARED_LIBRARY_PREFIX "")
 endif ()
 
-include_directories(${PROJECT_SOURCE_DIR}/components/eventReaderRoot/include ${PROJECT_SOURCE_DIR}/components/libRootFftwWrapper/include ${PROJECT_SOURCE_DIR}/components/anitaEventCorrelator/include ${PROJECT_SOURCE_DIR}/components/anitaAnalysisTools/include ${PROJECT_SOURCE_DIR}/components/anitaMagicDisplay/include)
+include_directories(${PROJECT_SOURCE_DIR}/components/eventReaderRoot/include ${PROJECT_SOURCE_DIR}/components/libRootFftwWrapper/include ${PROJECT_SOURCE_DIR}/components/anitaEventCorrelator/include ${PROJECT_SOURCE_DIR}/components/anitaAnalysisTools/include ${PROJECT_SOURCE_DIR}/components/anitaMagicDisplay/include ${PROJECT_SOURCE_DIR}/components/AnitaAnalysisFramework/include ${PROJECT_SOURCE_DIR}/components/UCorrelator/include )
 
 # When done tweaking common stuff, configure the components (subprojects).
 # NOTE: The order matters! The most independent ones should go first.
@@ -35,4 +36,6 @@ add_subdirectory(components/libRootFftwWrapper) # libRootFftwWrapper is a librar
 add_subdirectory(components/eventReaderRoot) # eventReaderRoot is a shared library (depends on libRootFftwWrapper
 add_subdirectory(components/anitaEventCorrelator)
 add_subdirectory(components/anitaAnalysisTools)
+add_subdirectory(components/AnitaAnalysisFramework)
+add_subdirectory(components/UCorrelator)
 add_subdirectory(components/anitaMagicDisplay)
