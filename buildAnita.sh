@@ -18,8 +18,9 @@ if [ ${updated} -ne 0 ];then
     echo "Please run ./buildAnita.sh again now the update is complete."
     exit 1;
 fi
+chmod +x anitaGitHooks/pre-commit.sh
 ln -sf anitaGitHooks/pre-commit.sh .git/hooks/pre-commit
-chmod +x .git/hooks/pre-commit
+
 
 
 #Step 1: To create the components directory and try and download the repositories
