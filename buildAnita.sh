@@ -18,7 +18,6 @@ if [ ${updated} -ne 0 ];then
     echo "Please run ./buildAnita.sh again now the update is complete."
     exit 1;
 fi
-chmod +x anitaGitHooks/pre-commit.sh
 ln -sf anitaGitHooks/pre-commit.sh .git/hooks/pre-commit
 
 
