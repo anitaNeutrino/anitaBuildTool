@@ -1,0 +1,42 @@
+
+### This should help not recompile everything always
+###
+
+
+
+
+.PHONY: all configure clean install legacy components build 
+
+all: build cmake
+clean: cmake-clean
+install: cmake-install 
+
+
+### TODO add doxygen into CMakelists 
+doc: legacy-doc
+
+build: build/Makefile cmake 
+	@+make -C  ./build
+
+
+components: 
+	./updateComponents.sh
+	rm -rf build
+
+configure: build/Makefile 
+	@ccmake . build 
+
+cmake-install: 
+	@make -C ./build install 
+
+build/Makefile: 
+	@rm -rf build  # 
+	@mkdir -p build 
+	@cd build && cmake ../ 
+
+distclean: 
+	@echo "Removing cmake directory" 
+	@rm -rf build 
+
+cmake-clean: build/Makefile 
+	@make -C ./build clean 
