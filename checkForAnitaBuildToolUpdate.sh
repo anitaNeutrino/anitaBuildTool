@@ -7,8 +7,8 @@ BASE=$(git merge-base @{0} @{u})
 if [ $LOCAL = $REMOTE ]; then
     echo "anitaBuildTool is up to date."
 elif [ $LOCAL = $BASE ]; then
-    echo "Local anitaBuildTool is behind upstream. Attempting pull."
-    git merge
+    echo "Local anitaBuildTool is behind upstream. Attempting merge."
+    git merge origin/master
     exit 1
 elif [ $REMOTE = $BASE ]; then
     echo "Local anitaBuildTool is ahead of upstream. Consider pushing your changes."
