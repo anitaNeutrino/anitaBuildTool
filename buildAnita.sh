@@ -20,7 +20,7 @@ if [ ${updated} -ne 0 ];then
     echo "Please run ./buildAnita.sh again now the update is complete."
     exit 1;
 fi
-ln -sf anitaGitHooks/pre-commit.sh .git/hooks/pre-commit
+ln -sf ${PWD}/gitHooks/pre-commit.sh .git/hooks/pre-commit
 
 
 #Step 1: update all the components 

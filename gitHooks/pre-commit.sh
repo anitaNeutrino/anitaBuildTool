@@ -18,11 +18,11 @@ done
 if [ ${conflicts} -ge 1 ]
 then
     echo "Commiting files in components subdirectory is not allowed. Aborting commit."
-    echo "The following files must be unstages to commit to anitaBuildTool:"
+    echo "The following files must be unstaged to commit to anitaBuildTool:"
     for file in ${files}; do
 	if [[ $file == "components/"* ]]
 	then
-	   echo "\t"${file};
+	   echo $'\t'${file};
 	fi;
     done;
     exit 1
