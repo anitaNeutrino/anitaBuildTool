@@ -11,6 +11,10 @@ hash root-config 2>/dev/null || { echo >&2 "I require root-config but it's not i
 hash cmake 2>/dev/null || { echo >&2 "I require cmake but it's not installed.  Aborting."; exit 1; }
 
 
+CONFIGURE=${1:0} 
+JOBS=${2:2} 
+
+
 
 #Step 0: Update myself, since I occasionally get updated.
 ./checkForAnitaBuildToolUpdate.sh
@@ -32,6 +36,11 @@ ln -sf ${PWD}/gitHooks/pre-commit.sh .git/hooks/pre-commit
 ln -sf components/libRootFftwWrapper/cmake
 
 ln -sf Makefile.hidden_until_you_run_build_script Makefile 
-make && make install
+
+if [ ${CONFIGURE} -ne 0 ]; then 
+  make configure; 
+fi
+
+make -j $JOBS && make install
 
 

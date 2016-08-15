@@ -5,8 +5,12 @@ A simple script to download and build the ANITA libraries
 In theory all one needs to do is make sure the ANITA_UTIL_INSTALL_DIR enviromental vairable is set and then type:
 ./buildAnita.sh
 
-This will build and install everything with the defaults
+This will build and install everything with the defaults. 
 
+
+The buildAnita.sh script takes two optional arguments
+
+    ./buildAnita.sh [configure = 0] [njobs = 2] 
 
 The build script is not very sophisticated it will attempt to:
 1) Checkout the libraries from GitHub
@@ -21,9 +25,13 @@ cmake https://cmake.org
 these should be available using your favourite package manager for your system.
 
 
+
+
 ##############################################################################
 More advanced use 
 ##############################################################################
+
+You can change the branch for anitaEventReader by changing the file which_event_reader_root
 
 After buildAnita.sh is run once, more things are possible
 
