@@ -11,8 +11,8 @@ hash root-config 2>/dev/null || { echo >&2 "I require root-config but it's not i
 hash cmake 2>/dev/null || { echo >&2 "I require cmake but it's not installed.  Aborting."; exit 1; }
 
 
-CONFIGURE=${1:0} 
-JOBS=${2:2} 
+CONFIGURE=0 #1
+JOBS=3
 
 
 
@@ -28,7 +28,7 @@ ln -sf ${PWD}/gitHooks/pre-commit.sh .git/hooks/pre-commit
 
 
 #Step 1: update all the components 
-./updateComponents.sh 
+./updateComponents.sh
 
 #Step 2: Now try and make a build dir and actually compile stuff
 
