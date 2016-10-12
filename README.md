@@ -75,7 +75,12 @@ ROOT 6.06/04
 cmake 2.8.11 
 all installed via yum from normal + epel repositories 
 
-
+Ubuntu 16.04 (64-bit) 
+--------------------------
+gcc version 4.8.5 (Ubuntu 4.8.5-4ubuntu2) 
+ROOT 6.06/08 (installed explicitly with minuit2)
+cmake 3.5.1
+all installed via yum from normal + epel repositories
 
 
 
