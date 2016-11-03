@@ -53,6 +53,13 @@ cmake -- 3.5.2
 The ROOT, cmake and FFTW libraries were installed using homebrew.sh for details on how to install these see
 https://alexpearce.me/2016/02/root-on-os-x-el-capitan/
 
+macOS Sierra 10.12
+------------------
+ROOT -- 6.06/08
+cmake -- 3.6.2
+clang -- 800.0.38 (xcode 8.0)
+
+
 Scientific Linux 6
 ------------------
 Scientific Linux release 6.7 (Carbon)
@@ -75,7 +82,11 @@ ROOT 6.06/04
 cmake 2.8.11 
 all installed via yum from normal + epel repositories 
 
-
+Ubuntu 16.04 (64-bit) 
+--------------------------
+gcc version 4.8.5 (Ubuntu 4.8.5-4ubuntu2) 
+ROOT 6.06/08 (installed explicitly with minuit2)
+cmake 3.5.1
 
 
 
