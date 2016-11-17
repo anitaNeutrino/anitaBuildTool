@@ -28,6 +28,10 @@ if (WIN32)
   set(CMAKE_SHARED_LIBRARY_PREFIX "")
 endif ()
 
+include(MacroOptionalAddSubdirectory)
+
+
+
 include_directories(${PROJECT_SOURCE_DIR}/components/eventReaderRoot/include ${PROJECT_SOURCE_DIR}/components/libRootFftwWrapper/include ${PROJECT_SOURCE_DIR}/components/anitaEventCorrelator/include ${PROJECT_SOURCE_DIR}/components/anitaAnalysisTools/include ${PROJECT_SOURCE_DIR}/components/anitaMagicDisplay/include ${PROJECT_SOURCE_DIR}/components/AnitaAnalysisFramework/include ${PROJECT_SOURCE_DIR}/components/UCorrelator/include )
 
 
@@ -47,3 +51,7 @@ add_subdirectory(components/anitaAnalysisTools)
 add_subdirectory(components/AnitaAnalysisFramework)
 add_subdirectory(components/UCorrelator)
 add_subdirectory(components/anitaMagicDisplay)
+macro_optional_add_subdirectory(components/anitaTreeMaker)
+macro_optional_add_subdirectory(components/aware/AwareWebLib)
+macro_optional_add_subdirectory(components/anitaAwareFileMaker)
+macro_optional_add_subdirectory(components/anitaTelem)
