@@ -20,13 +20,14 @@ fi
 JOBS=3
 if [ ! -z $2 ] 
 then  
-  JOBS=$3 
+  JOBS=$2 
 fi 
 
-
-
-
-
+BUILDAWARE=0 #1
+if [ ! -z $3 ] 
+then  
+  BUILDAWARE=$3 
+fi 
 
 
 
@@ -43,7 +44,7 @@ ln -sf ${PWD}/gitHooks/pre-commit.sh .git/hooks/pre-commit
 
 
 #Step 1: update all the components 
-./updateComponents.sh
+./updateComponents.sh ${BUILDAWARE}
 
 #Step 2: Now try and make a build dir and actually compile stuff
 

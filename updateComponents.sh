@@ -41,8 +41,6 @@ if [[ $BUILDAWARE == 1 ]]; then
 done	
     
 fi
-exit 0
-
 
 
 #echo $EVENT_READER_BRANCH
