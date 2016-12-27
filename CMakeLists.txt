@@ -32,7 +32,7 @@ include(MacroOptionalAddSubdirectory)
 
 
 
-include_directories(${PROJECT_SOURCE_DIR}/components/eventReaderRoot/include ${PROJECT_SOURCE_DIR}/components/libRootFftwWrapper/include ${PROJECT_SOURCE_DIR}/components/anitaEventCorrelator/include ${PROJECT_SOURCE_DIR}/components/anitaAnalysisTools/include ${PROJECT_SOURCE_DIR}/components/anitaMagicDisplay/include ${PROJECT_SOURCE_DIR}/components/AnitaAnalysisFramework/include ${PROJECT_SOURCE_DIR}/components/UCorrelator/include )
+include_directories(${PROJECT_SOURCE_DIR}/components/eventReaderRoot/include ${PROJECT_SOURCE_DIR}/components/libRootFftwWrapper/include ${PROJECT_SOURCE_DIR}/components/anitaEventCorrelator/include ${PROJECT_SOURCE_DIR}/components/anitaAnalysisTools/include ${PROJECT_SOURCE_DIR}/components/anitaMagicDisplay/include ${PROJECT_SOURCE_DIR}/components/AnitaAnalysisFramework/include ${PROJECT_SOURCE_DIR}/components/UCorrelator/include ${PROJECT_SOURCE_DIR}/components/aware/AwareWebLib/include )
 
 
 ## This is defined in some of the submodules already, but this will force it
