@@ -9,6 +9,17 @@ fi
 
 
 EVENT_READER_BRANCH=`cat which_event_reader` 
+
+if [ "$EVENT_READER_BRANCH" == "anita3" ] ; then
+  echo "Using ANITA-3 branch" 
+elif [ "$EVENT_READER_BRANCH" == "master" ] ; then
+  echo "Using master branch" 
+else 
+  echo "Using deprecated or unknown branch. Switched to master." 
+  EVENT_READER_BRANCH="master" 
+fi
+
+
 mkdir -p components
 cd components
 GH=https://github.com
