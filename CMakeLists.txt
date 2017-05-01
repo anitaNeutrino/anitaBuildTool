@@ -31,7 +31,6 @@ endif ()
 include(MacroOptionalAddSubdirectory)
 
 
-
 include_directories(${PROJECT_SOURCE_DIR}/components/eventReaderRoot/include ${PROJECT_SOURCE_DIR}/components/libRootFftwWrapper/include ${PROJECT_SOURCE_DIR}/components/anitaEventCorrelator/include ${PROJECT_SOURCE_DIR}/components/anitaAnalysisTools/include ${PROJECT_SOURCE_DIR}/components/anitaMagicDisplay/include ${PROJECT_SOURCE_DIR}/components/AnitaAnalysisFramework/include ${PROJECT_SOURCE_DIR}/components/UCorrelator/include ${PROJECT_SOURCE_DIR}/components/aware/AwareWebLib/include )
 
 
@@ -40,8 +39,12 @@ include_directories(${PROJECT_SOURCE_DIR}/components/eventReaderRoot/include ${P
 option ( FORCE_OLD_GPP_ABI " Force old g++ ABI; this might be necessary if using new g++ with ROOT compiled with older g++ or other similar situations" OFF ) 
 if (FORCE_OLD_GPP_ABI) 
   add_definitions( -D_GLIBCXX_USE_CXX11_ABI=0 ) 
-endif() 
- 
+endif()
+
+option(VECTORIZE "Enable Manual SIMD Vectorization" ON)
+option(NATIVE_ARCH "Add march=native flags to gcc compiler, if set to off will use -mavx instead. Leave on unless you have a reason." ON)
+
+
 # When done tweaking common stuff, configure the components (subprojects).
 # NOTE: The order matters! The most independent ones should go first.
 add_subdirectory(components/libRootFftwWrapper) # libRootFftwWrapper is a library (depends on FFT)
