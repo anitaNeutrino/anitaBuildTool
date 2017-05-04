@@ -42,7 +42,11 @@ if (FORCE_OLD_GPP_ABI)
 endif()
 
 option(VECTORIZE "Enable Manual SIMD Vectorization" ON)
-option(NATIVE_ARCH "Add march=native flags to gcc compiler, if set to off will use -mavx instead. Leave on unless you have a reason." ON)
+option(NATIVE_ARCH "Add march=native flags to gcc compiler, leave on unless you have a reason." ON)
+option(HOFFMAN_2_INTEL "Enable a set of optimization flags that work for the intel nodes on the hoffman2 cluster. This is a work in progress and you probably don't want to switch this on unless you're at UCLA." OFF)
+if(HOFFMAN_2_INTEL)
+  add_definitions(-msse4)
+endif()
 
 
 # When done tweaking common stuff, configure the components (subprojects).
