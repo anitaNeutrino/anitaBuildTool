@@ -8,7 +8,16 @@ fi
 
 hash root-config 2>/dev/null || { echo >&2 "I require root-config but it's not installed.  Aborting."; exit 1; }
 
+# Check for required ROOT features
+for feature in minuit2; do
+    if [ $(root-config --has-${feature}) == "no" ]; then
+	echo >&2 "I require root to be build with ${feature}, but it's not. Aborting"
+	exit 1;
+    fi;
+done;
 hash cmake 2>/dev/null || { echo >&2 "I require cmake but it's not installed.  Aborting."; exit 1; }
+
+
 
 
 CONFIGURE=0 #1
