@@ -1,0 +1,57 @@
+<html>
+<head> 
+<meta http-equiv="refresh" content="3600"> 
+<title>ANITA Software Status</title>
+<style type="text/css"> 
+
+h1 ,h2
+{
+  color: #3b5f99; 
+}
+
+body
+{
+}
+
+#build
+{
+  background-color: #dfdafe; 
+  float: left; 
+  margin: 10px; 
+  padding: 10px 
+
+}
+
+#dox
+{
+  background-color: #acdafe; 
+  float: left; 
+  margin: 10px; 
+  padding: 10px 
+
+}
+
+</style> 
+</head>
+
+<body>
+<h1>ANITA Software Status</h1> 
+<hr>
+<p> This page is updated every few hours (or when manually updated). 
+<div id="dox">
+<h2>Doxygen Documentation:</h2> <br> (<a href="doxy.log">see last log</a>) 
+<ul>
+  <li> libRootFftwWrapper: (<a target="_doc" href="libRootFftwWrapper">html</a>| <a href="libRootFftwWrapper/libRootFftwWrapper.pdf">pdf</a>)  </li> 
+  <li> eventReaderRoot: (<a target="_doc" href="eventReaderRoot">html</a>| <a href="eventReaderRoot/eventReaderRoot.pdf">pdf</a>)  </li> 
+  <li> anitaEventCorrelator: (<a target="_doc" href="anitaEventCorrelator">html</a>| <a href="anitaEventCorrelator/anitaEventCorrelator.pdf">pdf</a>)  </li> 
+  <li> AnitaAnalysisFramework: (<a target="_doc" href="AnitaAnalysisFramework">html</a>| <a href="AnitaAnalysisFramework/AnitaAnalysisFramework.pdf">pdf</a>)  </li> 
+  <li> anitaAnalysisTools (aka ACCLAIM): (<a target="_doc" href="anitaAnalysisTools">html</a>| <a href="anitaAnalysisTools/anitaAnalysisTools.pdf">pdf</a>)  </li> 
+  <li> UCorrelator: (<a target="_doc" href="UCorrelator">html</a>| <a href="UCorrelator/UCorrelator.pdf">pdf</a>)  </li> 
+  <li> anitaMagicDisplay: (<a target="_doc" href="anitaMagicDisplay">html</a>| <a href="anitaMagicDisplay/anitaMagicDisplay.pdf">pdf</a>)  </li> 
+ </ul> 
+
+</div>
+<div id="build"> 
+<h2>Build status: </h2> 
+
+
