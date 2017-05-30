@@ -1,5 +1,14 @@
 #! /bin/bash
 
+### Continuous integration script for ANITA Build Tool ###
+### When run, updates, checks build, and rebuilds doc
+### Different environments are supported using files within in the ci_envs dir
+###  
+### Cosmin Deaconu <cozzyd@kicp.uchicago.edu> 
+
+
+
+#Slurm stuff  (ignore if not using slurm) 
 
 #SBATCH --job-name=anita_ci 
 #SBATCH --output=ci.out 
@@ -9,14 +18,6 @@
 #SBATCH --account=kicp
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=4
-
-### Continuous integration script for ANITA Build Tool ###
-### When run, updates, checks build, and rebuilds doc
-### Different environments are supported using files within in the ci_envs dir
-###  
-### Cosmin Deaconu <cozzyd@kicp.uchicago.edu> 
-
-
 
 
 ## Check ANITA_CI_BUILD_DIR and switch to that that if it's defined
@@ -54,8 +55,9 @@ for env in ci_envs/*.sh; do
     rm -rf "$NM"
     mkdir -p $NM
     cd "$NM" 
-    cmake   ${ANITA_CI_CMAKE_ARGS} ..  &> "$HTML_OUT_DIR"/"$NM".log
-    make -j $NJOBS &>>"$HTML_OUT_DIR"/"$NM".log
+    cmake   ${ANITA_CI_CMAKE_ARGS} ..  &> "$HTML_OUT_DIR"/"$NM".logtmp
+    make -j $NJOBS &>>"$HTML_OUT_DIR"/"$NM".logtmp
+    mv "$HTML_OUT_DIR"/"$NM".logtmp" $HTML_OUT_DIR"/"$NM".log
     succeeded=$?
     cd "$ROOTDIR"
     if [ $succeeded -eq 0 ]; then 
@@ -68,8 +70,6 @@ done;
 
 
 #now let's build all the documentation 
-
-# libRootFftwWrapper, anitaEventCorrelator, anitaMagicDisplay and eventReaderoroot have documentation in doc/doxynew.cfg 
 
 date > "${HTML_OUT_DIR}"/doxy.log
 
