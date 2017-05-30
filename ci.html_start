@@ -36,8 +36,8 @@ body
 
 <body>
 <h1>ANITA Software Status</h1> 
-<hr>
 <p> This page is updated every few hours (or when manually updated). 
+<hr>
 <div id="dox">
 <h2>Doxygen Documentation:</h2> <br> (<a href="doxy.log">see last log</a>) 
 <ul>
