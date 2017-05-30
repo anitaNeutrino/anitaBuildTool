@@ -55,7 +55,9 @@ for env in ci_envs/*.sh; do
     rm -rf "$NM"
     mkdir -p $NM
     cd "$NM" 
-    cmake   ${ANITA_CI_CMAKE_ARGS} ..  &> "$HTML_OUT_DIR"/"$NM".logtmp
+
+    date > "$HTML_OUT_DIR"/"$NM".logtmp 
+    cmake   ${ANITA_CI_CMAKE_ARGS} ..  &>> "$HTML_OUT_DIR"/"$NM".logtmp
     make -j $NJOBS &>>"$HTML_OUT_DIR"/"$NM".logtmp
     mv "$HTML_OUT_DIR"/"$NM".logtmp "$HTML_OUT_DIR"/"$NM".log
     succeeded=$?
@@ -75,9 +77,9 @@ date > "${HTML_OUT_DIR}"/doxy.log
 
 for i in libRootFftwWrapper eventReaderRoot anitaMagicDisplay anitaEventCorrelator AnitaAnalysisFramework anitaAnalysisTools UCorrelator; do 
   cd components/$i
-  doxygen doc/Doxyfile >> "${HTML_OUT_DIR}"/doxy.log
+  doxygen doc/Doxyfile &>> "${HTML_OUT_DIR}"/doxy.log
   rsync -avh doc/html/ ${HTML_OUT_DIR}/$i &> /dev/null 
-  cd doc/latex && make && cp refman.pdf ${HTML_OUT_DIR}/$i/$i.pdf 
+  cd doc/latex && make &>> "{HTML_OUT_DIR}"/doxy.log && cp refman.pdf ${HTML_OUT_DIR}/$i/$i.pdf 
   cd ${ROOTDIR} 
 done
 
