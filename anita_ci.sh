@@ -1,9 +1,13 @@
 #! /bin/bash
 
-### Continuous integration script for ANITA Build Tool ###
+### anita_ci.sh
+### Continuous integration script for ANITA Build Tool
 ### When run, updates, checks build, and rebuilds doc
 ### Different environments are supported using files within in the ci_envs dir
-###  
+### You will almost certainly need to modify those if you are running it elsewhere. (and feel free to add or remove environments) 
+### Influential environmental variables are : 
+###     ANITA_CI_BUILD_DIR  (path of anitaBuildTool... otherwise assumes we're there already) 
+###     ANITA_CI_OUT_DIR   (path of html output, otherwise does html dir in current folder 
 ### Cosmin Deaconu <cozzyd@kicp.uchicago.edu> 
 
 
@@ -29,13 +33,14 @@ ROOTDIR=`pwd`;
 NJOBS=4
 
 
-export ANITA_UTIL_INSTALL_DIR=`pwd`/util 
 
+export ANITA_UTIL_INSTALL_DIR=$ROOTDIR/util 
 
 ## Get ready for a build! 
 ./checkForAnitaBuildToolUpdate.sh
 ./updateComponents.sh
 ./buildHacks.sh
+
 
 HTML_OUT_DIR=`pwd`/html 
 
@@ -59,8 +64,8 @@ for env in ci_envs/*.sh; do
     date > "$HTML_OUT_DIR"/"$NM".logtmp 
     cmake   ${ANITA_CI_CMAKE_ARGS} ..  &>> "$HTML_OUT_DIR"/"$NM".logtmp
     make -j $NJOBS &>>"$HTML_OUT_DIR"/"$NM".logtmp
-    mv "$HTML_OUT_DIR"/"$NM".logtmp "$HTML_OUT_DIR"/"$NM".log
     succeeded=$?
+    mv "$HTML_OUT_DIR"/"$NM".logtmp "$HTML_OUT_DIR"/"$NM".log
     cd "$ROOTDIR"
     if [ $succeeded -eq 0 ]; then 
         echo "<p> BUILD STATUS FOR $NM IS <b><span style='color:green'>SUCCESS</span></b>. <a href='${NM}.log' target='_log'>Click here for log</a> </p>" > "${HTML_OUT_DIR}"/${NM}.htmlpart.new 
