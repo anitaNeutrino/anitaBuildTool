@@ -57,7 +57,7 @@ for env in ci_envs/*.sh; do
     cd "$NM" 
     cmake   ${ANITA_CI_CMAKE_ARGS} ..  &> "$HTML_OUT_DIR"/"$NM".logtmp
     make -j $NJOBS &>>"$HTML_OUT_DIR"/"$NM".logtmp
-    mv "$HTML_OUT_DIR"/"$NM".logtmp" $HTML_OUT_DIR"/"$NM".log
+    mv "$HTML_OUT_DIR"/"$NM".logtmp "$HTML_OUT_DIR"/"$NM".log
     succeeded=$?
     cd "$ROOTDIR"
     if [ $succeeded -eq 0 ]; then 
