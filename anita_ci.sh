@@ -84,9 +84,16 @@ for i in libRootFftwWrapper eventReaderRoot anitaMagicDisplay anitaEventCorrelat
   cd components/$i
   doxygen doc/Doxyfile &>> "${HTML_OUT_DIR}"/doxy.log
   rsync -avh doc/html/ ${HTML_OUT_DIR}/$i &> /dev/null 
-  cd doc/latex && make &>> "{HTML_OUT_DIR}"/doxy.log && cp refman.pdf ${HTML_OUT_DIR}/$i/$i.pdf 
+  cd doc/latex && make &>> "${HTML_OUT_DIR}"/doxy.log && cp refman.pdf ${HTML_OUT_DIR}/$i/$i.pdf 
   cd ${ROOTDIR} 
 done
+
+
+## now for ANITA build tool 
+doxygen doc/Doxyfile &>> "${HTML_OUT_DIR}"/doxy.log
+rsync -avh doc/html/ ${HTML_OUT_DIR}/anitaBuildTool &> /dev/null 
+cd doc/latex && make &>> "${HTML_OUT_DIR}"/doxy.log && cp refman.pdf ${HTML_OUT_DIR}/anitaBuildTool/anitaBuildTool.pdf 
+cd ${ROOTDIR} 
 
 
 
