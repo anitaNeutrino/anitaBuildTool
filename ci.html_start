@@ -49,6 +49,7 @@ body
   <li> anitaAnalysisTools (aka ACCLAIM): (<a target="_doc" href="anitaAnalysisTools">html</a>| <a href="anitaAnalysisTools/anitaAnalysisTools.pdf">pdf</a>)  </li> 
   <li> UCorrelator: (<a target="_doc" href="UCorrelator">html</a>| <a href="UCorrelator/UCorrelator.pdf">pdf</a>)  </li> 
   <li> anitaMagicDisplay: (<a target="_doc" href="anitaMagicDisplay">html</a>| <a href="anitaMagicDisplay/anitaMagicDisplay.pdf">pdf</a>)  </li> 
+  <li> icemc: (<a target="_doc" href="icemc">html</a>| <a href="icemc/icemc.pdf">pdf</a>)  </li> 
  </ul> 
 <p> (<a href="doxy.log">see last log</a>) 
 </div>

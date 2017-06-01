@@ -85,7 +85,7 @@ done;
 
 date > "${HTML_OUT_DIR}"/doxy.log
 
-for i in libRootFftwWrapper eventReaderRoot anitaMagicDisplay anitaEventCorrelator AnitaAnalysisFramework anitaAnalysisTools UCorrelator; do 
+for i in libRootFftwWrapper eventReaderRoot anitaMagicDisplay anitaEventCorrelator AnitaAnalysisFramework anitaAnalysisTools UCorrelator icemc; do 
   cd components/$i
   doxygen doc/Doxyfile &>> "${HTML_OUT_DIR}"/doxy.log
   rsync -avh doc/html/ ${HTML_OUT_DIR}/$i &> /dev/null 
