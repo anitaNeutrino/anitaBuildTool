@@ -86,7 +86,7 @@ fi
 
 #echo $EVENT_READER_BRANCH
 
-for repName in $RN/libRootFftwWrapper.git $AN/eventReaderRoot.git $AN/anitaEventCorrelator.git $AN/anitaAnalysisTools.git $AN/anitaMagicDisplay.git $AN/AnitaAnalysisFramework $AN/UCorrelator; do
+for repName in $RN/libRootFftwWrapper.git $AN/eventReaderRoot.git $AN/anitaEventCorrelator.git $AN/anitaAnalysisTools.git $AN/anitaMagicDisplay.git $AN/AnitaAnalysisFramework $AN/UCorrelator $AN/icemc; do
     thisDirWithGit=${repName##*/}
     thisDir=${thisDirWithGit%.*}
     if [ -d "$thisDir" ]; then

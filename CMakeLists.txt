@@ -52,6 +52,7 @@ endif()
 # NOTE: The order matters! The most independent ones should go first.
 add_subdirectory(components/libRootFftwWrapper) # libRootFftwWrapper is a library (depends on FFT)
 add_subdirectory(components/eventReaderRoot) # eventReaderRoot is a shared library (depends on libRootFftwWrapper
+add_subdirectory(components/icemc) 
 add_subdirectory(components/anitaEventCorrelator)
 add_subdirectory(components/anitaAnalysisTools)
 add_subdirectory(components/AnitaAnalysisFramework)
