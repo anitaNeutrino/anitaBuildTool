@@ -25,7 +25,7 @@
 
 
 ## Check ANITA_CI_BUILD_DIR and switch to that that if it's defined
-if [ -n "$ANITA_CI_BUILD_DIR"]; then
+if [ -n "$ANITA_CI_BUILD_DIR" ]; then
   cd "$ANITA_CI_BUILD_DIR"; 
 fi;
 
@@ -71,6 +71,11 @@ for env in ci_envs/*.sh; do
         echo "<p> BUILD STATUS FOR $NM IS <b><span style='color:green'>SUCCESS</span></b>. <a href='${NM}.log' target='_log'>Click here for log</a> </p>" > "${HTML_OUT_DIR}"/${NM}.htmlpart.new 
     else
         echo "<p> BUILD STATUS FOR $NM IS <b><span style='color:red'>FAIL</span></b>. <a href='${NM}.log' target='_log'>Click here for log</a> </p>" > "${HTML_OUT_DIR}"/${NM}.htmlpart.new
+        if [ -n "$ANITA_SLACK_TOKEN" ] ; then
+          echo "Posting fail to slack" 
+          host=`hostname`
+          ./post2slack.sh bugszilla ":bug: $NM build on $host is broken" 
+        fi
     fi 
     mv "${HTML_OUT_DIR}"/${NM}.htmlpart.new "${HTML_OUT_DIR}"/${NM}.htmlpart
 done; 
