@@ -10,6 +10,7 @@
 # the account, partition, and qos should not be changed
 #SBATCH --account=cron-account
 #SBATCH --partition=cron
+#SBATCH --job-name=anita_ci_cron
 #SBATCH --qos=cron
 
 # Specify a valid cron string for the schedule
@@ -21,7 +22,8 @@ SCHEDULE='5 */2 * * *'
 export ANITA_CI_BUILD_DIR=/home/cozzyd/anita/continuous/anitaBuildTool 
 export ANITA_CI_OUT_DIR=/home/cozzyd/anita/continuous/anitaBuildTool/html 
 
-
+#cancel any other script if there is one already
+scancel --name anita_ci 
 sbatch -A kicp -p kicp -c 4 anita_ci.sh 
 
 # resubmit this script with --begin set to the next scheduled cron time
