@@ -8,7 +8,7 @@ CC=$(shell grep 'CMAKE_CXX_COMPILER:FILEPATH=' build/CMakeCache.txt | sed s,'CMA
 RED=\033[0;31m
 NC=\033[0m # No Color
 
-.PHONY: all configure clean install distclean update build 
+.PHONY: all configure clean install distclean update build error-report
 
 all: build
 clean: cmake-clean
@@ -31,14 +31,7 @@ cmake-install:
 	@make -C ./build install
 
 error-report:
-	@echo -e "${RED}*****************************************************************************${NC}"
-	@echo -e "${RED}Error! Could not build the ANITA software suite.${NC}"
-	@echo -e "${RED}Please post the ENTIRE output in the ANITA slack #bugzilla channel.${NC}"
-	@echo -e "${RED}https://anitamission.slack.com/messages/C4DCY5PDG/${NC}"
-	@echo -e "${RED}The root version is $(shell root-config --version)${NC}"
-	@echo -e "${RED}The compiler is $(shell $(CC) --version | head -1)${NC}"
-	@echo -e "${RED}The system info is $(shell uname -a)${NC}"
-	@echo -e "${RED}*****************************************************************************${NC}"
+	@./error-report.sh
 
 build/Makefile: 
 	@rm -rf build  # 
