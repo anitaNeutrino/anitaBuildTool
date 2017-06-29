@@ -14,7 +14,8 @@ The buildAnita.sh script takes two optional arguments
 
     ./buildAnita.sh [njobs = 1] [configure = 0]
 
-The options:
+The options do the following:
+
     njobs:
         The number of threads you wish to compile on, default is 1.
     	Passing njobs > 1 will result in faster compilation.

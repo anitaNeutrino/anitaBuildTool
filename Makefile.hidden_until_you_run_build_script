@@ -20,8 +20,7 @@ clean: cmake-clean ## Delete all compiled components in build directory
 install: cmake-install ## Install compiled components to ANITA_UTIL_INSTALL_DIR
 
 ### TODO add doxygen into CMakelists 
-doc: legacy-doc ## Create the legacy documentation
-
+# doc: legacy-doc
 
 build: build/Makefile
 	@+make -C  ./build || make error-report
@@ -49,7 +48,7 @@ build/Makefile:
 	@cd build && cmake ../ 
 
 
-distclean: ## Remove build directory, symlinks and regenerate the build/Makefile from the CMakeLists.txt
+distclean: ## Remove build directory (run ./buildAnita.sh to re-compile)
 	@echo "Removing cmake directory" 
 	@rm -rf build 
 	unlink cmake
