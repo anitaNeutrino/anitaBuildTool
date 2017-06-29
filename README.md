@@ -2,19 +2,32 @@
 A simple script to download and build the ANITA libraries
 
 
+## Building for the first time
+
 In theory all one needs to do is make sure the ANITA_UTIL_INSTALL_DIR enviromental vairable is set and then type:
-./buildAnita.sh
+
+   ./buildAnita.sh
 
 This will build and install everything with the defaults. 
 
-
 The buildAnita.sh script takes two optional arguments
 
-    ./buildAnita.sh [configure = 0] [njobs = 2] 
+    ./buildAnita.sh [njobs = 1] [configure = 0]
+
+The options:
+    njobs:
+        The number of threads you wish to compile on, default is 1.
+    	Passing njobs > 1 will result in faster compilation.
+	However, warnings and errors will appear out of order, making them harder to understand.
+
+    configure: (0 is no, 1 is yes)
+        Pass 1 to edit enable compiler flags and other options before building, default is 0 (don't edit them).
+	Documentation on what these do is somewhat sparse so proceed with caution.
+	(Deleting the build directory and recompiling will return everything to the default setting.)
 
 The build script is not very sophisticated it will attempt to:
 1) Checkout the libraries from GitHub
-2) Make a build directory and run cmake .. in that directory
+2) Make a build directory and run cmake in that directory to generate Makefiles
 3) Build the libraries (make)
 4) Install the libraries in to ANITA_UTIL_INSTALL_DIR (make install)
 
@@ -25,25 +38,18 @@ cmake https://cmake.org
 these should be available using your favourite package manager for your system.
 
 
+## Building for the (N>1)th time
+
+After buildAnita.sh is run once, more things are possible.
+anitaBuildTool includes a high level Makefile, which allows for separately compiling/updating/installing the software, rather than doing all of the above.
+The Makefile commands are documented, to see what is available do 
+
+    make help
+
+in the anitaBuildTool directory.
 
 
-##############################################################################
-More advanced use 
-##############################################################################
-
-You can change the branch for anitaEventReader by changing the file which_event_reader_root
-
-After buildAnita.sh is run once, more things are possible
-
-  - build without updating components (use convenience make file, or cd into build and Make). 
-
-  - configure some compile time parameters (you can use make configure to do this, or run ccmake inside the build directory). 
-    make and make install after. Note that doing a make update or running the build script will forget everything. 
-    If you find yourself doing this often, this tool is probably not for you. 
-
-##############################################################################
-Known working systems
-##############################################################################
+## Known working systems
 
 Mac OS X
 ---------

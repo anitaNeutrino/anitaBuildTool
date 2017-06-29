@@ -20,17 +20,18 @@ hash cmake 2>/dev/null || { echo >&2 "I require cmake but it's not installed.  A
 
 
 
-CONFIGURE=0 #1
+JOBS=1
 if [ ! -z $1 ] 
 then  
-  CONFIGURE=$1 
+  JOBS=$1
 fi 
 
-JOBS=3
+CONFIGURE=0 #1
 if [ ! -z $2 ] 
 then  
-  JOBS=$2 
+  CONFIGURE=$2
 fi 
+
 
 BUILDAWARE=0 #1
 if [ ! -z $3 ] 

@@ -1,48 +1,61 @@
 
 ### This should help not recompile everything always
-###
+### Commands are documented by a double # after the rule name
+
+
+.PHONY: all configure clean install distclean update build error-report help
 
 
 
-CC=$(shell grep 'CMAKE_CXX_COMPILER:FILEPATH=' build/CMakeCache.txt | sed s,'CMAKE_CXX_COMPILER:FILEPATH=',,)
-RED=\033[0;31m
-NC=\033[0m # No Color
 
-.PHONY: all configure clean install distclean update build error-report
+all: build ## (Default) Build the ANITA software without installing
 
-all: build
-clean: cmake-clean
-install: cmake-install 
 
+help: ## Display this help message
+	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' Makefile.hidden_until_you_run_build_script | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
+
+
+clean: cmake-clean ## Delete all compiled components in build directory
+
+install: cmake-install ## Install compiled components to ANITA_UTIL_INSTALL_DIR
 
 ### TODO add doxygen into CMakelists 
-doc: legacy-doc
+doc: legacy-doc ## Create the legacy documentation
 
-build: build/Makefile 
+
+build: build/Makefile
 	@+make -C  ./build || make error-report
 
-update: 
-	./updateComponents.sh
 
-configure: build/Makefile 
+update: ## Update the components without compiling anything
+	@./checkForAnitaBuildToolUpdate.sh && ./updateComponents.sh
+
+
+configure: build/Makefile ## Edit the pre-defined configure flags in the CMakeLists.txt files
 	@ccmake . build 
 
-cmake-install: 
+
+cmake-install:
 	@make -C ./build install
+
 
 error-report:
 	@./error-report.sh
 
-build/Makefile: 
+
+build/Makefile:
 	@rm -rf build  # 
 	@mkdir -p build 
 	@cd build && cmake ../ 
 
-distclean: 
+
+distclean: ## Remove build directory, symlinks and regenerate the build/Makefile from the CMakeLists.txt
 	@echo "Removing cmake directory" 
 	@rm -rf build 
 	unlink cmake
 	unlink Makefile 
 
+
 cmake-clean: build/Makefile 
 	@make -C ./build clean 
+
