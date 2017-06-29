@@ -4,6 +4,9 @@
 
 
 
+CC=$(shell grep 'CMAKE_CXX_COMPILER:FILEPATH=' build/CMakeCache.txt | sed s,'CMAKE_CXX_COMPILER:FILEPATH=',,)
+RED=\033[0;31m
+NC=\033[0m # No Color
 
 .PHONY: all configure clean install distclean update build 
 
@@ -16,7 +19,7 @@ install: cmake-install
 doc: legacy-doc
 
 build: build/Makefile 
-	@+make -C  ./build
+	@+make -C  ./build || make error-report
 
 update: 
 	./updateComponents.sh
@@ -25,7 +28,17 @@ configure: build/Makefile
 	@ccmake . build 
 
 cmake-install: 
-	@make -C ./build install 
+	@make -C ./build install
+
+error-report:
+	@echo -e "${RED}*****************************************************************************${NC}"
+	@echo -e "${RED}Error! Could not build the ANITA software suite.${NC}"
+	@echo -e "${RED}Please post the ENTIRE error message in the ANITA slack #bugzilla channel.${NC}"
+	@echo -e "${RED}https://anitamission.slack.com/messages/C4DCY5PDG/${NC}"
+	@echo -e "${RED}The root version is $(shell root-config --version)${NC}"
+	@echo -e "${RED}The compiler is $(shell $(CC) --version | head -1)${NC}"
+	@echo -e "${RED}The system info is $(shell uname -a)${NC}"
+	@echo -e "${RED}*****************************************************************************${NC}"
 
 build/Makefile: 
 	@rm -rf build  # 
@@ -35,7 +48,6 @@ build/Makefile:
 distclean: 
 	@echo "Removing cmake directory" 
 	@rm -rf build 
-	#	@rm -rf components ## too dangerous :) 
 	unlink cmake
 	unlink Makefile 
 
