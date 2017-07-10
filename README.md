@@ -1,6 +1,16 @@
 # anitaBuildTool
 A simple script to download and build the ANITA libraries
 
+## Getting anitaBuildTool
+
+In your terminal do
+
+	git clone https://github.com/anitaNeutrino/anitaBuildTool
+
+to create an anitaBuildTool subdirectory containing the scripts and git repository.
+Alternatively, you can clone over ssh with
+
+	git clone git@github.com:anitaNeutrino/anitaBuildTool
 
 ## Building for the first time
 

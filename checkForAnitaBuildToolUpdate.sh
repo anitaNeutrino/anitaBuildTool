@@ -2,7 +2,8 @@
 
 # First check if we have a .git subdirectory
 if [ ! -d ".git" ]; then
-    echo "Error! anitaBuildTool must be cloned from the anitaBuildTool repository. Aborting build."
+    echo "Error! Could not find .git subdirectory!"
+    echo "anitaBuildTool must be cloned from the anitaBuildTool repository. Aborting build."
     echo "If you did not get the anitaBuildTool by running this command:"
     echo ""
     echo "    git clone https://github.com/anitaNeutrino/anitaBuildTool"
