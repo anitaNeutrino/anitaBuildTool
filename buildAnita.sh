@@ -51,13 +51,13 @@ fi
 ln -sf ${PWD}/gitHooks/pre-commit.sh .git/hooks/pre-commit
 
 
-  #Step 1: update all the components 
-  ./updateComponents.sh ${BUILDAWARE}
+#Step 1: update all the components 
+./updateComponents.sh ${BUILDAWARE}
+
 
 #Step 2: Now try and make a build dir and actually compile stuff
 
-#build hacks 
-
+# This script links the FFTW.cmake and FindROOT.cmake packaged with libRootFftwWrapper to this directory
 ./buildHacks.sh
 
 if [ ${CONFIGURE} -ne 0 ]; then 
