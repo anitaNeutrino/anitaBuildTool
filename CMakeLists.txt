@@ -40,6 +40,9 @@ if (FORCE_OLD_GPP_ABI)
   add_definitions( -D_GLIBCXX_USE_CXX11_ABI=0 ) 
 endif()
 
+# This is maybe useful for icemc, (or maybe this is a bad idea)
+add_definitions(-DANITA_BUILD_TOOL)
+
 option(VECTORIZE "Enable Manual SIMD Vectorization" ON)
 option(NATIVE_ARCH "Add march=native flags to gcc compiler, leave on unless you have a reason." ON)
 option(HOFFMAN_2_INTEL "Enable a set of optimization flags that work for the intel nodes on the hoffman2 cluster. This is a work in progress and you probably don't want to switch this on unless you're at UCLA." OFF)
