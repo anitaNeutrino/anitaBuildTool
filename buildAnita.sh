@@ -20,17 +20,30 @@ hash cmake 2>/dev/null || { echo >&2 "I require cmake but it's not installed.  A
 
 
 
+echo "Usage: ./buildAnita [# of jobs] [configure 0/1] [build aware 0/1]"
+echo
+echo "selected settings:"
+
 JOBS=1
 if [ ! -z $1 ] 
 then  
   JOBS=$1
 fi 
+echo "Using "${JOBS}" jobs for compilation"
+
 
 CONFIGURE=0 #1
 if [ ! -z $2 ] 
 then  
   CONFIGURE=$2
-fi 
+fi  
+if [ ${CONFIGURE} -eq 0 ]
+then
+echo "No user configuration, using default configuration"
+else
+echo "Will do user configuration"
+fi
+
 
 
 BUILDAWARE=0 #1
@@ -38,7 +51,13 @@ if [ ! -z $3 ]
 then  
   BUILDAWARE=$3 
 fi 
-
+if [ ${BUILDAWARE} -eq 1 ]
+then
+echo "Builing aware"
+else
+echo "Not building aware"
+fi
+echo
 
 #Step 0: Update myself, since I occasionally get updated.
 ./checkForAnitaBuildToolUpdate.sh
