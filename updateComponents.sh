@@ -34,14 +34,20 @@ updateComponent() {
 
 main() {
 
-    WHICH_COMPONENTS=0 #1
-    if [ ! -z $1 ]
-    then
-	WHICH_COMPONENTS=$1
+    #Do you want to nuke the build directory? default is yes, otherwise do `./updateComponents 0`
+    NUKE=1
+    if [ ! -z $1 ]; then
+	NUKE=$1
     fi
+
+    WHICH_COMPONENTS=0 #1
     if [ ! -z $2 ]
     then
 	WHICH_COMPONENTS=$2
+    fi
+    if [ ! -z $3 ]
+    then
+	WHICH_COMPONENTS=$3
     fi
 
     # Create and move to components subdirectory
@@ -74,8 +80,10 @@ main() {
     cd .. # Back to anitaBuildTool directory
 
     ### TODO: We should be able to tell if this is necessary or not... 
-    rm -rf build 
-
+    if [ $NUKE -eq 1 ]; then
+	rm -rf build 
+    fi
+    
     return 0;
 }
 

@@ -59,6 +59,23 @@ echo "Not building aware"
 fi
 echo
 
+
+NUKEBUILD=1
+if [ ! -z $4 ]
+then
+    NUKEBUILD=$4
+fi
+if [ ${NUKEBUILD} -eq 1 ]
+then
+echo "Nuking build directory and re-compiling everything"
+else
+echo "Leaving build directory and attempting partial re-compile"
+fi
+echo
+
+
+
+
 #Step 0: Update myself, since I occasionally get updated.
 ./checkForAnitaBuildToolUpdate.sh
 updated=$?
@@ -71,7 +88,7 @@ ln -sf ${PWD}/gitHooks/pre-commit.sh .git/hooks/pre-commit
 
 
 #Step 1: update all the components 
-./updateComponents.sh ${BUILDAWARE}
+./updateComponents.sh ${NUKEBUILD} ${BUILDAWARE}
 
 
 #Step 2: Now try and make a build dir and actually compile stuff

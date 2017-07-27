@@ -22,7 +22,7 @@ This will build and install everything with the defaults.
 
 The buildAnita.sh script takes two optional arguments
 
-    ./buildAnita.sh [njobs = 1] [configure = 0]
+    ./buildAnita.sh [njobs = 1] [configure = 0] [build aware? = 0] [nuke build dir? = 1]
 
 The options do the following:
 
@@ -35,6 +35,14 @@ The options do the following:
         Pass 1 to edit enable compiler flags and other options before building, default is 0 (don't edit them).
 	Documentation on what these do is somewhat sparse so proceed with caution.
 	(Deleting the build directory and recompiling will return everything to the default setting.)
+
+    build aware? (0 is no, 1 is yes)
+        Default is to not build aware.  Else it will build it
+
+    nuke build dir? (0 is no, 1 is yes)
+        Whether or not the build directory will be deleted and completely re-compiled.
+	Recompiling build directory is safest way, however for small changes (with no added files)
+	it is possible to rebuild only changed pieces.
 
 The build script is not very sophisticated it will attempt to:
 1) Checkout the libraries from GitHub
@@ -58,6 +66,13 @@ The Makefile commands are documented, to see what is available do
     make help
 
 in the anitaBuildTool directory.
+
+##If you want to update all the components, you can run:
+
+./updateComponents.sh [Nuke build directory?] [update aware?] [update treeMaker?]
+
+If you put a zero for [Nuke build directory?] it will possibly allow you to quicky rebuild
+    only things that have been changed. It might not work though if there are significant modifications.
 
 
 ## Known working systems
