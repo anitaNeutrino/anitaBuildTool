@@ -51,7 +51,7 @@ The build script is not very sophisticated it will attempt to:
 4) Install the libraries in to ANITA_UTIL_INSTALL_DIR (make install)
 
 The main prerequisites are:
-ROOT https://root.cern.ch
+ROOT https://root.cern.ch with Minuit2, MathMore, and Fortran. See https://root.cern.ch/build-prerequisites to make sure you have the prerequisites required for those features.
 FFTW http://www.fftw.org
 cmake https://cmake.org
 these should be available using your favourite package manager for your system.
@@ -67,7 +67,7 @@ The Makefile commands are documented, to see what is available do
 
 in the anitaBuildTool directory.
 
-##If you want to update all the components, you can run:
+## If you want to update all the components, you can run:
 
 ./updateComponents.sh [Nuke build directory?] [update aware?] [update treeMaker?]
 
