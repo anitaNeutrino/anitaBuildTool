@@ -43,11 +43,29 @@ endif()
 # This is maybe useful for icemc, (or maybe this is a bad idea)
 add_definitions(-DANITA_BUILD_TOOL)
 
-option(VECTORIZE "Enable Manual SIMD Vectorization" ON)
-option(NATIVE_ARCH "Add march=native flags to gcc compiler, leave on unless you have a reason." ON)
-option(HOFFMAN_2_INTEL "Enable a set of optimization flags that work for the intel nodes on the hoffman2 cluster. This is a work in progress and you probably don't want to switch this on unless you're at UCLA." OFF)
-if(HOFFMAN_2_INTEL)
-  add_definitions(-msse4)
+set(VECTORIZE_DOCSTRING "Enable Manual SIMD Vectorization. Requires a processor with a minimum of sse2, or avx.")
+option(VECTORIZE VECTORIZE_DOCSTRING ON)
+
+set(NATIVE_ARCH_DOCSTRING "Add march=native flags to gcc compiler, leave on unless you have a reason") # Handled in subdir CMakeLists.txt
+option(NATIVE_ARCH NATIVE_ARCH_DOCSTRING ON)
+
+option(HOFFMAN_BERN "Best gcc flags for bern nodes on Hoffman2 cluster at UCLA. Will override NATIVE_ARCH and VECTORIZE when set." OFF)
+mark_as_advanced(HOFFMAN_BERN)
+
+if(HOFFMAN_BERN)
+  # The commands
+  # $ cat /proc/cpuinfo | grep flags
+  # $ gcc -march=native -Q --help=target | grep march
+  # are your friends for figuring this out for your own cluster,
+  # especially if the headnode doesn't match the compute nodes
+  add_definitions(-march=amdfam10 -msse2)
+
+  # Overwrite the cached values of VECTORIZE And NATIVE_ARCH...
+  # Should help prevent mistakes
+  set(NATIVE_ARCH OFF CACHE BOOL NATIVE_ARCH_DOCSTRING FORCE)
+  set(VECTORIZE   ON  CACHE BOOL VECTORIZE_DOCSTRING   FORCE)
+  message("Overwrote NATIVE_ARCH, is now set to ${NATIVE_ARCH}")
+  message("Overwrote VECTORIZE, is now set to ${VECTORIZE}")
 endif()
 
 
