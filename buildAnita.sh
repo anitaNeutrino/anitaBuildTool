@@ -14,7 +14,15 @@ requiredFeatures="minuit2 mathmore fortran"
 missingFeatures=""
 for feature in $(echo ${requiredFeatures}); do
     if [ $(root-config --has-${feature}) == "no" ]; then
-	missingFeatures=${missingFeatures}" "${feature}
+
+	if [[ ${feature} == "fortran" && $(root-config --f77) != "NOTFOUND" ]]; then
+	    # How the existence of fortran support is registered seems to have changed over ROOT versions.
+	    # I think this is due to the transition from make to cmake in how ROOT is built.
+	    # The --f77 should work for old root, where-as --has-fortran works for newer.
+	    : # This colon means do nothing in bash
+	else
+	    missingFeatures=${missingFeatures}" "${feature}
+	fi
     fi;
 done;
 
@@ -25,6 +33,7 @@ if [ "${missingFeatures}" != "" ]; then
     echo >&2 ""
     echo >&2 "To see the prerequisited needed for the feature(s) you are missing see https://root.cern.ch/build-prerequisites"
     echo >&2 "To see the list of features currently in your version of root, do root-config --features"
+    echo >&2 "To check for fortran support in older ROOT versions, do root-config --f77"
     exit 1;
 fi;
 
