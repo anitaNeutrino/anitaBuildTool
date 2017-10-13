@@ -8,6 +8,7 @@
 ### Influential environmental variables are : 
 ###     ANITA_CI_BUILD_DIR  (path of anitaBuildTool... otherwise assumes we're there already) 
 ###     ANITA_CI_OUT_DIR   (path of html output, otherwise does html dir in current folder 
+###     ANITA_CI_URL_PREFIX (prefix of world-accessible url) 
 ### Cosmin Deaconu <cozzyd@kicp.uchicago.edu> 
 
 
@@ -69,13 +70,28 @@ for env in ci_envs/*.sh; do
     cd "$ROOTDIR"
     if [ $succeeded -eq 0 ]; then 
         echo "<p> BUILD STATUS FOR $NM IS <b><span style='color:green'>SUCCESS</span></b>. <a href='${NM}.log' target='_log'>Click here for log</a> </p>" > "${HTML_OUT_DIR}"/${NM}.htmlpart.new 
+
+        # check if we previously failed and send a message to slack if it's now successful 
+        if [ -f ${NM}.failed ] ; then
+
+           if [ -n "$ANITA_SLACK_TOKEN" ] ; then
+            echo "Posting success to slack" 
+            host=`hostname`
+            ./post2slack.sh bugszilla ":champagne: $NM build on $host is unbroken" 
+           fi
+
+           rm -f ${NM}.failed 
+        fi
     else
         echo "<p> BUILD STATUS FOR $NM IS <b><span style='color:red'>FAIL</span></b>. <a href='${NM}.log' target='_log'>Click here for log</a> </p>" > "${HTML_OUT_DIR}"/${NM}.htmlpart.new
         if [ -n "$ANITA_SLACK_TOKEN" ] ; then
           echo "Posting fail to slack" 
           host=`hostname`
-          ./post2slack.sh bugszilla ":bug: $NM build on $host is broken" 
+          ./post2slack.sh bugszilla ":bug: $NM build on $host is broken. See ${ANITA_CI_URL_PREFIX}/${NM}.log for details"
         fi
+
+        ## record that this failed 
+        touch ${NM}.failed 
     fi 
     mv "${HTML_OUT_DIR}"/${NM}.htmlpart.new "${HTML_OUT_DIR}"/${NM}.htmlpart
 done; 
