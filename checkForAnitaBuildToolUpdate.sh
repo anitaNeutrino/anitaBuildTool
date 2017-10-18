@@ -14,6 +14,24 @@ if [ ! -d ".git" ]; then
 fi;
 
 
+method=$(head -1 clone_method)
+#echo $method
+
+desiredUrl="https://github.com/anitaNeutrino/anitaBuildTool.git"
+if [ "${method}" = "ssh" ]; then
+    desiredUrl="git@github.com:anitaNeutrino/anitaBuildTool.git"
+fi
+
+currentUrl=$(git remote get-url origin)
+if [ "${currentUrl}" = "${desiredUrl}" ]; then
+    echo -n ""
+else
+    echo "Updating anitaBuildTool clone_method"
+    git remote set-url origin ${desiredUrl}
+    git remote -v
+fi
+
+
 # Update the repository
 git fetch
 fetchSuccess=$?

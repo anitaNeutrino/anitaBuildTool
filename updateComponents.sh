@@ -15,6 +15,24 @@ updateComponent() {
 	echo -n "$thisDir already exists, will update: "
 	cd $thisDir
 
+	currentUrl=$(git remote get-url origin)
+	#echo "${currentUrl}"
+	#echo "${repName}"
+	if [ "${currentUrl}" = "${repName}" ]; then
+	    echo -n ""
+	else
+	    echo "Updating ${thisDir} clone_method"
+	    git remote set-url origin ${repName}
+	    git remote -v
+	fi
+
+
+	#echo "in ${thisDir}"
+	#currentUrl=$(git remote get-url origin)
+	#echo "currentUrl = "$currentUrl
+	#echo "setting to "$repName
+	#git remote set-url origin ${repName}
+
 	# Could do the fetch and merge separately to give more informative errors.
 	git pull
 	pullSuccess=${?}
@@ -50,14 +68,22 @@ main() {
 	WHICH_COMPONENTS=$3
     fi
 
+
+    # Get desired libraries
+    method=$(head -1 clone_method)
+    #echo $method
+
     # Create and move to components subdirectory
     mkdir -p components
     cd components
 
-    # Get desired libraries
-    GH=https://github.com
-    RN=$GH/nichol77
-    AN=$GH/anitaNeutrino
+    GH="https://github.com/"
+    if [ "${method}" = "ssh" ]; then
+	GH="git@github.com:"
+    fi
+
+    RN=${GH}nichol77
+    AN=${GH}anitaNeutrino
 
     if [[ $WHICH_COMPONENTS == 1 ]]; then
 	echo "Will download the AWARE libraries as well"

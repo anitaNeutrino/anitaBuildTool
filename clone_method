@@ -1,0 +1,7 @@
+https
+#
+# Top line of this file determines the clone method!
+# Options are https or ssh (actually ssh or anything else)
+# You need to run the updateComponents.sh or checkForAnitaBuildToolUpdate.sh for this to be picked up
+# To use ssh you will need upload your public ssh-key to your github
+# If you don't know you to do this, then google is your friend

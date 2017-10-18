@@ -67,6 +67,11 @@ The Makefile commands are documented, to see what is available do
 
 in the anitaBuildTool directory.
 
+## clone_method
+
+Edit the top line of the clone method file (from https to ssh) to clone over ssh rather than https.
+This requires uploading your public ssh-key to GitHub.
+
 ## If you want to update all the components, you can run:
 
 ./updateComponents.sh [Nuke build directory?] [update aware?] [update treeMaker?]
