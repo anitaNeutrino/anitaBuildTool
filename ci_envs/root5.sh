@@ -16,7 +16,6 @@ module load doxygen
 module load gcc/4.8
 module load graphviz 
 module load texlive 
-module load libpng
 export CC=`which gcc` 
 export CXX=`which g++` 
 module unload ROOT 
