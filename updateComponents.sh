@@ -105,6 +105,14 @@ main() {
 
     cd .. # Back to anitaBuildTool directory
 
+    docInput=doc/doxygenComponentInput.txt
+    echo "" > ${docInput}
+    for comp in $(ls -d components/*); do
+	echo INPUT += ${comp} >> ${docInput}
+	echo INPUT += ${comp}/include >> ${docInput}
+	echo INPUT += ${comp}/src >> ${docInput}
+    done
+
     ### TODO: We should be able to tell if this is necessary or not... 
     if [ $NUKE -eq 1 ]; then
 	rm -rf build 

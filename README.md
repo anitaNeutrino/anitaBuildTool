@@ -1,5 +1,10 @@
 # anitaBuildTool
-A simple script to download and build the ANITA libraries
+
+A simple script to download and build the ANITA libraries.
+
+Addition Doxygen generated documentation is available here https://anitaNeutrino.github.io/anitaBuildTool
+[![Documentation Status](https://travis-ci.org/anitaNeutrino/anitaBuildTool.svg?branch=master)](https://travis-ci.org/anitaNeutrino/anitaBuildTool)
+
 
 ## Getting anitaBuildTool
 
@@ -16,39 +21,27 @@ Alternatively, you can clone over ssh with
 
 In theory all one needs to do is make sure the ANITA_UTIL_INSTALL_DIR enviromental vairable is set and then type:
 
-   ./buildAnita.sh
-
-This will build and install everything with the defaults. 
-
-The buildAnita.sh script takes two optional arguments
-
-    ./buildAnita.sh [njobs = 1] [configure = 0] [build aware? = 0] [nuke build dir? = 1]
-
-The options do the following:
-
-    njobs:
-        The number of threads you wish to compile on, default is 1.
-    	Passing njobs > 1 will result in faster compilation.
-	However, warnings and errors will appear out of order, making them harder to understand.
-
-    configure: (0 is no, 1 is yes)
-        Pass 1 to edit enable compiler flags and other options before building, default is 0 (don't edit them).
-	Documentation on what these do is somewhat sparse so proceed with caution.
-	(Deleting the build directory and recompiling will return everything to the default setting.)
-
-    build aware? (0 is no, 1 is yes)
-        Default is to not build aware.  Else it will build it
-
-    nuke build dir? (0 is no, 1 is yes)
-        Whether or not the build directory will be deleted and completely re-compiled.
-	Recompiling build directory is safest way, however for small changes (with no added files)
-	it is possible to rebuild only changed pieces.
+	./buildAnita.sh
 
 The build script is not very sophisticated it will attempt to:
-1) Checkout the libraries from GitHub
-2) Make a build directory and run cmake in that directory to generate Makefiles
-3) Build the libraries (make)
-4) Install the libraries in to ANITA_UTIL_INSTALL_DIR (make install)
+
+	1) Checkout the libraries from GitHub
+	2) Make a build directory and run cmake in that directory to generate Makefiles
+	3) Build the libraries (make)
+	4) Install the libraries in to ANITA_UTIL_INSTALL_DIR (make install)
+
+
+This will build and install everything with the defaults. 
+However, there are some optional arguments
+
+    ./buildAnita.sh [njobs = 1] [configure = 0] [build aware = 0] [nuke build dir = 1]
+
+| Argument       | Default | What it does                                                                                                                                       |
+| -------------  | ---     | -------------                                                                                                                                      |
+| njobs          | 1       | The number of threads you wish to compile with. njobs > 1 will result in faster compilation, however, warnings and errors may appear out of order. |
+| configure      | 0       | Edit compiler flags and other options before building.                                                                                             |
+| build aware    | 0       | Whether or not to download and build AWARE in addition to the default packages.                                                                    |
+| nuke build dir | 1       | Whether or not the build directory will be deleted and completely re-compiled.                                                                     |
 
 The main prerequisites are:
 ROOT https://root.cern.ch with Minuit2, MathMore, and Fortran. See https://root.cern.ch/build-prerequisites to make sure you have the prerequisites required for those features.
@@ -57,7 +50,7 @@ cmake https://cmake.org
 these should be available using your favourite package manager for your system.
 
 
-## Building for the (N>1)th time
+## Building for the Nth time
 
 After buildAnita.sh is run once, more things are possible.
 anitaBuildTool includes a high level Makefile, which allows for separately compiling/updating/installing the software, rather than doing all of the above.
@@ -74,10 +67,10 @@ This requires uploading your public ssh-key to GitHub.
 
 ## If you want to update all the components, you can run:
 
-./updateComponents.sh [Nuke build directory?] [update aware?] [update treeMaker?]
+	./updateComponents.sh [Nuke build directory?] [update aware?] [update treeMaker?]
 
-If you put a zero for [Nuke build directory?] it will possibly allow you to quicky rebuild
-    only things that have been changed. It might not work though if there are significant modifications.
+If you put a zero for [Nuke build directory?] it will possibly allow you to quicky rebuild only things that have been changed.
+It might not work though if there are significant modifications.
 
 
 ## Known working systems
@@ -124,7 +117,4 @@ Ubuntu 16.04 (64-bit)
 gcc version 4.8.5 (Ubuntu 4.8.5-4ubuntu2) 
 ROOT 6.06/08 (installed explicitly with minuit2)
 cmake 3.5.1
-
-
-
 

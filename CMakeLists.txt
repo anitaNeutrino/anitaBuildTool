@@ -52,6 +52,8 @@ option(NATIVE_ARCH NATIVE_ARCH_DOCSTRING ON)
 option(HOFFMAN_BERN "Best gcc flags for bern nodes on Hoffman2 cluster at UCLA. Will override NATIVE_ARCH and VECTORIZE when set." OFF)
 mark_as_advanced(HOFFMAN_BERN)
 
+
+
 if(HOFFMAN_BERN)
   # The commands
   # $ cat /proc/cpuinfo | grep flags
@@ -67,6 +69,14 @@ if(HOFFMAN_BERN)
   message("Overwrote NATIVE_ARCH, is now set to ${NATIVE_ARCH}")
   message("Overwrote VECTORIZE, is now set to ${VECTORIZE}")
 endif()
+
+option(THREAD_SANITIZER "Switch on thread sanitizer (requires sufficiently recent gcc/clang)" OFF)
+mark_as_advanced(THREAD_SANITIZER)
+if(THREAD_SANITIZER)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=thread")
+  set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -fsanitize=thread")
+endif()
+
 
 
 # When done tweaking common stuff, configure the components (subprojects).
