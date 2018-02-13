@@ -2,8 +2,9 @@
 
 A simple script to download and build the ANITA libraries.
 
-Addition Doxygen generated documentation is available here https://anitaNeutrino.github.io/anitaBuildTool
-[![Documentation Status](https://travis-ci.org/anitaNeutrino/anitaBuildTool.svg?branch=master)](https://travis-ci.org/anitaNeutrino/anitaBuildTool)
+Additional `doxygen` generated documentation is available online here https://anitaneutrino.github.io/anitaBuildTool
+
+The latest documentation status is: [![Documentation Status](https://travis-ci.org/anitaNeutrino/anitaBuildTool.svg?branch=master)](https://travis-ci.org/anitaNeutrino/anitaBuildTool)
 
 
 ## Getting anitaBuildTool
