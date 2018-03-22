@@ -117,5 +117,13 @@ if [ ${CONFIGURE} -ne 0 ]; then
 fi
 
 make -j $JOBS && make install
+CONVOLVETUFFRESPONSES=0
+if [ ! -z $5 ]; then
+  CONVOLVETUFFRESPONSES=$5
+fi
+
+if [ ${CONVOLVETUFFRESPONSES} -eq 1 ]; then
+  cd components/AnitaAnalysisFramework && sh makeTUFFImpulseResponses.sh && cd ../.. && make install
+fi
 
 

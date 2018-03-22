@@ -43,6 +43,7 @@ However, there are some optional arguments
 | configure      | 0       | Edit compiler flags and other options before building.                                                                                             |
 | build aware    | 0       | Whether or not to download and build AWARE in addition to the default packages.                                                                    |
 | nuke build dir | 1       | Whether or not the build directory will be deleted and completely re-compiled.                                                                     |
+| convolve tuff responses | 0       | Whether or not you want to convolve together the TUFF models with the A3 and A4 impulse responses                                         |
 
 The main prerequisites are:
 ROOT https://root.cern.ch with Minuit2, MathMore, and Fortran. See https://root.cern.ch/build-prerequisites to make sure you have the prerequisites required for those features.
