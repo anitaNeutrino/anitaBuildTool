@@ -45,7 +45,8 @@ updateComponent() {
 	cd ..
     else
 	echo "Fetching $thisDir"
-	git clone $repName
+	#git clone $repName
+	git clone --depth 1 $repName
     fi
 }
 
