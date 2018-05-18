@@ -1,0 +1,29 @@
+;; Helpful variables for emacs users running cmake-ide https://github.com/atilaneves/cmake-ide
+;; Requires cmake to be run with CMAKE_EXPORT_COMPILE_COMMANDS to ON, which it now is by default.
+
+;; Sets the build directory for compiling in emacs to be the same as the actual ANITA build directory.
+;; This makes the whole thing massively faster as without these one triggers a run of cmake
+;; whenever you open (any) cpp file the first time emacs starts.
+
+;; Elisp adapted from https://stackoverflow.com/questions/4012321/
+
+((c++-mode . (
+	      ;; Set the cmake-ide-build-dir to anitaBuildTool/build
+	      (eval . (set (make-local-variable 'cmake-ide-build-dir)
+			   (concat (file-name-directory
+				    (let ((d (dir-locals-find-file ".")))
+				      (if (stringp d) d (car d)))) "build")))
+
+	      ;; Output cmake-ide-build-dir to *Messages*
+	      (eval . (message "cmake-ide-build-dir set to `%s'." cmake-ide-build-dir))
+
+	      ;; Set the cmake-ide-compile command to use 8 threads, because otherwise it's slow.
+	      ;; Also runs make install if compilation was successful
+	      (eval . (set (make-local-variable 'cmake-ide-compile-command)
+			   (concat "make -j8 -C " cmake-ide-build-dir
+				   " && make -C " cmake-ide-build-dir " install")))
+
+	      ;; Output to cmake-ide-compile-command to *Messages*
+	      (eval . (message "cmake-ide-compile-command set to `%s'." cmake-ide-compile-command))
+
+	      )))

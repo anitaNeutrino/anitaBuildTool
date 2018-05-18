@@ -1,7 +1,5 @@
-
 ### This should help not recompile everything always
 ### Commands are documented by a double # after the rule name
-
 
 .PHONY: all configure clean install distclean update build error-report help
 
@@ -32,6 +30,10 @@ update: ## Update the components without compiling anything
 
 configure: build/Makefile ## Edit the pre-defined configure flags in the CMakeLists.txt files
 	@ccmake . build 
+
+dir-locals: ## Links a .dir-locals.el file for emacs users running cmake-ide
+	@echo "Linking .dir-locals.el for emacs users running cmake-ide"
+	@ln -s .dir-locals.el.must-be-linked .dir-locals.el
 
 
 cmake-install:
