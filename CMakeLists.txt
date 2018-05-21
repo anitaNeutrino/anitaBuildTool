@@ -71,11 +71,19 @@ if(HOFFMAN_BERN)
   message("Overwrote VECTORIZE, is now set to ${VECTORIZE}")
 endif()
 
-option(THREAD_SANITIZER "Switch on thread sanitizer (requires sufficiently recent gcc/clang)" OFF)
-mark_as_advanced(THREAD_SANITIZER)
-if(THREAD_SANITIZER)
+option(SANITIZE_THREADS "Switch on thread sanitizer (requires sufficiently recent gcc/clang, incompatible with SANITIZE_MEMORY)" OFF)
+mark_as_advanced(SANITIZE_THREADS)
+if(SANITIZE_THREADS)
   set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=thread")
   set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -fsanitize=thread")
+endif()
+
+
+option(SANITIZE_MEMORY "Switch on memory sanitizer (requires sufficiently recent gcc/clang, incompatible with SANITIZE_THREADS)" OFF)
+mark_as_advanced(SANITIZE_MEMORY)
+if(SANITIZE_MEMORY)
+  set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fsanitize=address,leak")
+  set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} -fsanitize=address,leak")
 endif()
 
 
