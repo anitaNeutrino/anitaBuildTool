@@ -32,7 +32,7 @@ endif ()
 include(MacroOptionalAddSubdirectory)
 
 
-include_directories(${PROJECT_SOURCE_DIR}/components/libAntarcticaRoot/include ${PROJECT_SOURCE_DIR}/components/eventReaderRoot/include ${PROJECT_SOURCE_DIR}/components/libRootFftwWrapper/include ${PROJECT_SOURCE_DIR}/components/libRootFftwWrapper/vectorclass ${PROJECT_SOURCE_DIR}/components/anitaEventCorrelator/include ${PROJECT_SOURCE_DIR}/components/anitaAnalysisTools/include ${PROJECT_SOURCE_DIR}/components/anitaMagicDisplay/include ${PROJECT_SOURCE_DIR}/components/AnitaAnalysisFramework/include ${PROJECT_SOURCE_DIR}/components/UCorrelator/include ${PROJECT_SOURCE_DIR}/components/aware/AwareWebLib/include ) 
+include_directories(${PROJECT_SOURCE_DIR}/components/libAntarcticaRoot/include ${PROJECT_SOURCE_DIR}/components/libRootFftwWrapper/include ${PROJECT_SOURCE_DIR}/components/eventReaderRoot/include ${PROJECT_SOURCE_DIR}/components/icemc/include ${PROJECT_SOURCE_DIR}/components/anitaSim/include  ${PROJECT_SOURCE_DIR}/components/libRootFftwWrapper/vectorclass ${PROJECT_SOURCE_DIR}/components/anitaEventCorrelator/include ${PROJECT_SOURCE_DIR}/components/anitaAnalysisTools/include ${PROJECT_SOURCE_DIR}/components/anitaMagicDisplay/include ${PROJECT_SOURCE_DIR}/components/AnitaAnalysisFramework/include ${PROJECT_SOURCE_DIR}/components/UCorrelator/include ${PROJECT_SOURCE_DIR}/components/aware/AwareWebLib/include ) 
 
 ## This is defined in some of the submodules already, but this will force it
 ## to be enabled all of the time. 
@@ -99,6 +99,7 @@ add_subdirectory(components/libRootFftwWrapper) # libRootFftwWrapper is a librar
 add_subdirectory(components/libAntarcticaRoot) # (Maybe) required by eventReaderRoot, required by icemc
 add_subdirectory(components/eventReaderRoot) # eventReaderRoot is a shared library (depends on libRootFftwWrapper
 add_subdirectory(components/icemc)
+add_subdirectory(components/anitaSim)
 add_subdirectory(components/anitaEventCorrelator)
 add_subdirectory(components/anitaAnalysisTools)
 add_subdirectory(components/AnitaAnalysisFramework)
