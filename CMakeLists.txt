@@ -34,6 +34,12 @@ include(MacroOptionalAddSubdirectory)
 
 include_directories(${PROJECT_SOURCE_DIR}/components/eventReaderRoot/include ${PROJECT_SOURCE_DIR}/components/libRootFftwWrapper/include ${PROJECT_SOURCE_DIR}/components/libRootFftwWrapper/vectorclass ${PROJECT_SOURCE_DIR}/components/anitaEventCorrelator/include ${PROJECT_SOURCE_DIR}/components/anitaAnalysisTools/include ${PROJECT_SOURCE_DIR}/components/anitaMagicDisplay/include ${PROJECT_SOURCE_DIR}/components/AnitaAnalysisFramework/include ${PROJECT_SOURCE_DIR}/components/UCorrelator/include ${PROJECT_SOURCE_DIR}/components/aware/AwareWebLib/include ) 
 
+## Mangling error and build failure for gcc versions 4.X on some OSs
+option (STOP_MANGLING_ABI "Use ABI version 6 to stop mangling errors on gcc versions 4.X" OFF )
+if(STOP_MANGLING_ABI)
+    list(APPEND CMAKE_CXX_FLAGS "-fabi-version=6")
+endif()	
+
 ## This is defined in some of the submodules already, but this will force it
 ## to be enabled all of the time. 
 option ( FORCE_OLD_GPP_ABI " Force old g++ ABI; this might be necessary if using new g++ with ROOT compiled with older g++ or other similar situations" OFF ) 
