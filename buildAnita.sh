@@ -117,14 +117,3 @@ if [ ${CONFIGURE} -ne 0 ]; then
 fi
 
 make -j $JOBS && make install
-CONVOLVETUFFRESPONSES=1
-if [ ! -z $5 ]; then
-  CONVOLVETUFFRESPONSES=$5
-fi
-
-if [ ${CONVOLVETUFFRESPONSES} -eq 1 ]; then
-    echo "Convolving TUFF responses by default."
-    cd components/AnitaAnalysisFramework && sh makeTUFFImpulseResponses.sh && cd ../.. && make install
-else
-    echo "Not convolving TUFF responses. If you wish to use icemc for ANITA-4 simulations, you should set CONVOLVETUFFRESPONSES=1."
-fi
