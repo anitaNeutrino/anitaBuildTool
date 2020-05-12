@@ -46,7 +46,7 @@ updateComponent() {
     else
 	echo "Fetching $thisDir"
 	#git clone $repName
-	git clone --depth 1 $repName
+	git clone --depth 1 --recursive $repName
     fi
 }
 
