@@ -11,6 +11,9 @@ updateComponent() {
     thisDirWithGit=${repName##*/}
     thisDir=${thisDirWithGit%.*}
 
+    libAntarcticaRootBranchExists=`git ls-remote --heads $repName libAntarcticaRoot | wc -l`
+    nicemcBranchExists=`git ls-remote --heads $repName nicemc | wc -l`
+    
     if [ -d "$thisDir" ]; then
 	echo -n "$thisDir already exists, will update: "
 	cd $thisDir
@@ -46,7 +49,15 @@ updateComponent() {
     else
 	echo "Fetching $thisDir"
 	#git clone $repName
-	git clone --depth 1 $repName
+
+	if [ $libAntarcticaRootBranchExists == 1 ]; then
+	    git clone --depth 1 -b libAntarcticaRoot $repName
+	elif [ $nicemcBranchExists == 1 ]; then
+	    git clone --depth 1 -b nicemc $repName
+	else		
+	    git clone --depth 1 $repName    
+	fi
+	
     fi
 }
 
@@ -100,7 +111,7 @@ main() {
 	done
     fi
 
-    for repName in $RN/libRootFftwWrapper.git $AN/libAntarcticaRoot.git $AN/eventReaderRoot.git $AN/anitaEventCorrelator.git $AN/anitaAnalysisTools.git $AN/anitaMagicDisplay.git $AN/AnitaAnalysisFramework $AN/UCorrelator $AN/icemc; do
+    for repName in $RN/libRootFftwWrapper.git $AN/libAntarcticaRoot.git $AN/eventReaderRoot.git $AN/anitaEventCorrelator.git $AN/anitaAnalysisTools.git $AN/anitaMagicDisplay.git $AN/AnitaAnalysisFramework $AN/UCorrelator $AN/icemc $AN/anitaSim; do
 	updateComponent $repName
     done
 
