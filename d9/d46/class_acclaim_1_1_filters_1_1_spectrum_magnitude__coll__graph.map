@@ -1,0 +1,10 @@
+<map id="Acclaim::Filters::SpectrumMagnitude" name="Acclaim::Filters::SpectrumMagnitude">
+<area shape="rect" id="node2" href="$de/d22/class_acclaim_1_1_filters_1_1_rayleigh_monitor.html" title="Tracks the amplitudes of frequencies but doesn&#39;t do anything else, to be inherited from..." alt="" coords="1287,47,1459,89"/>
+<area shape="rect" id="node3" href="$d7/d6d/class_uniform_filter_operation.html" title="UniformFilterOperation" alt="" coords="1005,63,1158,89"/>
+<area shape="rect" id="node4" href="$d2/dc9/class_filter_operation.html" title="FilterOperation" alt="" coords="679,63,785,89"/>
+<area shape="rect" id="node6" href="$de/dae/class_acclaim_1_1_fourier_buffer.html" title="A a glorified ring buffer of frequency amplitudes with a TSpectrum to look for CW spikes..." alt="" coords="1005,284,1157,311"/>
+<area shape="rect" id="node13" href="$d0/ddc/class_acclaim_1_1_rayleigh_hist.html" title="Acclaim::RayleighHist" alt="" coords="1297,488,1449,515"/>
+<area shape="rect" id="node8" href="$d3/d0a/class_acclaim_1_1_t_graph_f_b.html" title="A little class for some GUI magic (for MagicDisplay) " alt="" coords="338,632,475,659"/>
+<area shape="rect" id="node9" href="$d2/d1f/class_t_graph_aligned.html" title="TGraphAligned" alt="" coords="120,632,228,659"/>
+<area shape="rect" id="node15" href="$d4/d8f/class_ring_buffer.html" title="RingBuffer" alt="" coords="1039,852,1123,879"/>
+</map>

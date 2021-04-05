@@ -1,0 +1,9 @@
+<map id="AnitaEventSummary" name="AnitaEventSummary">
+<area shape="rect" id="node3" href="$d2/dee/class_anita_event_summary_1_1_payload_location.html" title="AnitaEventSummary::\lPayloadLocation" alt="" coords="285,57,436,98"/>
+<area shape="rect" id="node4" href="$dd/d41/class_anita_event_summary_1_1_source_hypothesis.html" title="AnitaEventSummary::\lSourceHypothesis" alt="" coords="5,481,156,522"/>
+<area shape="rect" id="node9" href="$d5/d46/class_anita_event_summary_1_1_m_c_truth.html" title="AnitaEventSummary::\lMCTruth" alt="" coords="285,230,436,271"/>
+<area shape="rect" id="node5" href="$d8/de1/class_anita_event_summary_1_1_waveform_info.html" title="Stores information about a coherently summed waveform (filtered/unfiltered/deconvolved) The coherent ..." alt="" coords="5,178,156,219"/>
+<area shape="rect" id="node6" href="$dc/de1/class_anita_event_summary_1_1_event_flags.html" title="AnitaEventSummary::\lEventFlags" alt="" coords="285,295,436,337"/>
+<area shape="rect" id="node7" href="$d6/dc0/class_anita_event_summary_1_1_channel_info.html" title="AnitaEventSummary::\lChannelInfo" alt="" coords="285,361,436,402"/>
+<area shape="rect" id="node8" href="$d8/dbb/class_anita_event_summary_1_1_pointing_hypothesis.html" title="AnitaEventSummary::\lPointingHypothesis" alt="" coords="285,426,436,467"/>
+</map>

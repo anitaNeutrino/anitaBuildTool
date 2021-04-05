@@ -1,0 +1,5 @@
+<map id="RawAnitaEvent" name="RawAnitaEvent">
+<area shape="rect" id="node3" href="$dc/ddc/class_calibrated_anita_event.html" title="CalibratedAnitaEvent – The Calibrated Calibrated Anita Event object. " alt="" coords="5,155,151,181"/>
+<area shape="rect" id="node4" href="$d9/d4a/class_useful_anita_event.html" title="UsefulAnitaEvent – The Calibrated Useful Anita Event object. " alt="" coords="175,155,299,181"/>
+<area shape="rect" id="node5" href="$d0/d63/class_pretty_anita_event.html" title="This is the event class, inherited from UsefulAnitaEvent, that has a number of correlation related me..." alt="" coords="176,229,297,256"/>
+</map>

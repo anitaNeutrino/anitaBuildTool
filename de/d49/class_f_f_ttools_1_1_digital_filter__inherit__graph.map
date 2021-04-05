@@ -1,0 +1,18 @@
+<map id="FFTtools::DigitalFilter" name="FFTtools::DigitalFilter">
+<area shape="rect" id="node2" href="$d9/d6e/class_f_f_ttools_1_1_digital_filter_series.html" title="FFTtools::DigitalFilterSeries" alt="" coords="201,107,387,133"/>
+<area shape="rect" id="node3" href="$de/de1/class_f_f_ttools_1_1_f_i_r_filter.html" title="FFTtools::FIRFilter" alt="" coords="227,157,361,184"/>
+<area shape="rect" id="node10" href="$df/d81/class_f_f_ttools_1_1_i_i_r_filter.html" title="FFTtools::IIRFilter" alt="" coords="229,360,359,387"/>
+<area shape="rect" id="node4" href="$d8/d43/class_f_f_ttools_1_1_box_filter.html" title="FFTtools::BoxFilter" alt="" coords="473,5,607,32"/>
+<area shape="rect" id="node5" href="$d9/d59/class_f_f_ttools_1_1_difference_filter.html" title="FFTtools::DifferenceFilter" alt="" coords="455,56,625,83"/>
+<area shape="rect" id="node6" href="$dd/d18/class_f_f_ttools_1_1_gaussian_filter.html" title="FFTtools::GaussianFilter" alt="" coords="457,107,623,133"/>
+<area shape="rect" id="node7" href="$d9/dce/class_f_f_ttools_1_1_lanczos_filter.html" title="FFTtools::LanczosFilter" alt="" coords="460,157,620,184"/>
+<area shape="rect" id="node8" href="$d1/d50/class_f_f_ttools_1_1_savitzky_golay_filter.html" title="FFTtools::SavitzkyGolayFilter" alt="" coords="442,208,638,235"/>
+<area shape="rect" id="node9" href="$d4/dff/class_f_f_ttools_1_1_sinc_filter.html" title="FFTtools::SincFilter" alt="" coords="471,259,609,285"/>
+<area shape="rect" id="node11" href="$d0/d08/class_f_f_ttools_1_1_inverse_filter.html" title="FFTtools::InverseFilter" alt="" coords="463,309,617,336"/>
+<area shape="rect" id="node12" href="$d7/d27/class_f_f_ttools_1_1_minimum_phase_filter.html" title="FFTtools::MinimumPhaseFilter" alt="" coords="439,360,641,387"/>
+<area shape="rect" id="node13" href="$d3/da2/class_f_f_ttools_1_1_thiran_filter.html" title="FFTtools::ThiranFilter" alt="" coords="467,411,613,437"/>
+<area shape="rect" id="node14" href="$d4/d98/class_f_f_ttools_1_1_transformed_z_p_k_filter.html" title="FFTtools::TransformedZPKFilter" alt="" coords="435,461,645,488"/>
+<area shape="rect" id="node15" href="$d8/d86/class_f_f_ttools_1_1_butterworth_filter.html" title="FFTtools::ButterworthFilter" alt="" coords="695,411,873,437"/>
+<area shape="rect" id="node16" href="$dd/d59/class_f_f_ttools_1_1_chebyshev_i_filter.html" title="FFTtools::ChebyshevIFilter" alt="" coords="693,461,875,488"/>
+<area shape="rect" id="node17" href="$dd/db9/class_f_f_ttools_1_1_r_c_filter.html" title="FFTtools::RCFilter" alt="" coords="719,512,849,539"/>
+</map>

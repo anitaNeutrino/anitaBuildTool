@@ -1,0 +1,7 @@
+<map id="Acclaim::Clustering::Event" name="Acclaim::Clustering::Event">
+<area shape="rect" id="node2" href="$d2/dee/class_anita_event_summary_1_1_payload_location.html" title="AnitaEventSummary::\lPayloadLocation" alt="" coords="5,171,156,212"/>
+<area shape="rect" id="node3" href="$d7/dfd/class_useful_adu5_pat.html" title="As UsefulAnitaEvent is to RawAnitaEvent, UsefulAdu5Pat is to Adu5Pat. Well not quite as useful but yo..." alt="" coords="180,178,291,205"/>
+<area shape="rect" id="node4" href="$d2/dbf/class_adu5_pat.html" title="Adu5Pat – The ADU5 Position and Attitude Data. " alt="" coords="83,81,155,108"/>
+<area shape="rect" id="node6" href="$d8/db1/class_anita_geom_tool.html" title="AnitaGeomTool – The ANITA Geometry Tool. " alt="" coords="179,81,291,108"/>
+<area shape="rect" id="node7" href="$df/de1/class_rampdem_reader.html" title="RampdemReader" alt="" coords="315,81,439,108"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="FFTtools::RCFilter" name="FFTtools::RCFilter">
+<area shape="rect" id="node2" href="$d4/d98/class_f_f_ttools_1_1_transformed_z_p_k_filter.html" title="FFTtools::TransformedZPKFilter" alt="" coords="5,155,216,181"/>
+<area shape="rect" id="node3" href="$df/d81/class_f_f_ttools_1_1_i_i_r_filter.html" title="FFTtools::IIRFilter" alt="" coords="46,80,175,107"/>
+<area shape="rect" id="node4" href="$d6/d16/class_f_f_ttools_1_1_digital_filter.html" title="FFTtools::DigitalFilter" alt="" coords="37,5,185,32"/>
+</map>

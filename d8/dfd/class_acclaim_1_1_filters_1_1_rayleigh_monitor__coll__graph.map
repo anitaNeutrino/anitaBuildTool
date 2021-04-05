@@ -1,0 +1,9 @@
+<map id="Acclaim::Filters::RayleighMonitor" name="Acclaim::Filters::RayleighMonitor">
+<area shape="rect" id="node2" href="$d7/d6d/class_uniform_filter_operation.html" title="UniformFilterOperation" alt="" coords="1005,119,1158,145"/>
+<area shape="rect" id="node3" href="$d2/dc9/class_filter_operation.html" title="FilterOperation" alt="" coords="679,5,785,32"/>
+<area shape="rect" id="node5" href="$de/dae/class_acclaim_1_1_fourier_buffer.html" title="A a glorified ring buffer of frequency amplitudes with a TSpectrum to look for CW spikes..." alt="" coords="1005,445,1157,472"/>
+<area shape="rect" id="node12" href="$d0/ddc/class_acclaim_1_1_rayleigh_hist.html" title="Acclaim::RayleighHist" alt="" coords="1297,768,1449,795"/>
+<area shape="rect" id="node7" href="$d3/d0a/class_acclaim_1_1_t_graph_f_b.html" title="A little class for some GUI magic (for MagicDisplay) " alt="" coords="338,97,475,124"/>
+<area shape="rect" id="node8" href="$d2/d1f/class_t_graph_aligned.html" title="TGraphAligned" alt="" coords="120,97,228,124"/>
+<area shape="rect" id="node14" href="$d4/d8f/class_ring_buffer.html" title="RingBuffer" alt="" coords="1039,955,1123,981"/>
+</map>

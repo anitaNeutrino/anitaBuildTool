@@ -1,0 +1,5 @@
+<map id="RawSurfPacket_t" name="RawSurfPacket_t">
+<area shape="rect" id="node5" href="$de/d43/struct_generic_header__t.html" title="The Generic Header. " alt="" coords="106,109,226,136"/>
+<area shape="rect" id="node3" href="$db/dc1/struct_surf_channel_full__t.html" title="A complete SURF channel. " alt="" coords="251,109,378,136"/>
+<area shape="rect" id="node4" href="$d2/db9/struct_raw_surf_channel_header__t.html" title="The channel header. " alt="" coords="227,5,402,32"/>
+</map>

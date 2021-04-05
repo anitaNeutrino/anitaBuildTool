@@ -1,0 +1,7 @@
+<map id="Acclaim::InterferometricMap" name="Acclaim::InterferometricMap">
+<area shape="rect" id="node3" href="$d7/d5f/class_acclaim_1_1_gui_parent.html" title="Inherit from this to draw interactive TGraphs on top of you. " alt="" coords="87,171,221,197"/>
+<area shape="rect" id="node4" href="$d7/dfd/class_useful_adu5_pat.html" title="As UsefulAnitaEvent is to RawAnitaEvent, UsefulAdu5Pat is to Adu5Pat. Well not quite as useful but yo..." alt="" coords="245,171,356,197"/>
+<area shape="rect" id="node5" href="$d2/dbf/class_adu5_pat.html" title="Adu5Pat – The ADU5 Position and Attitude Data. " alt="" coords="149,81,221,108"/>
+<area shape="rect" id="node7" href="$d8/db1/class_anita_geom_tool.html" title="AnitaGeomTool – The ANITA Geometry Tool. " alt="" coords="245,81,357,108"/>
+<area shape="rect" id="node8" href="$df/de1/class_rampdem_reader.html" title="RampdemReader" alt="" coords="380,81,504,108"/>
+</map>

@@ -1,0 +1,9 @@
+<map id="AnitaResponse::DeconvolutionMethod" name="AnitaResponse::DeconvolutionMethod">
+<area shape="rect" id="node2" href="$d8/d2b/class_anita_response_1_1_all_pass_deconvolution.html" title="AnitaResponse::AllPassDeconvolution" alt="" coords="256,5,503,32"/>
+<area shape="rect" id="node3" href="$df/d87/class_anita_response_1_1_band_limited_deconvolution.html" title="AnitaResponse::BandLimited\lDeconvolution" alt="" coords="284,57,475,98"/>
+<area shape="rect" id="node4" href="$d0/d1b/class_anita_response_1_1_c_l_e_a_n.html" title="AnitaResponse::CLEAN" alt="" coords="297,123,461,149"/>
+<area shape="rect" id="node5" href="$da/d30/class_anita_response_1_1_c_l_e_a_n_deconvolution.html" title="AnitaResponse::CLEANDeconvolution" alt="" coords="256,173,503,200"/>
+<area shape="rect" id="node6" href="$d3/d60/class_anita_response_1_1_impulse_response_x_corr.html" title="AnitaResponse::ImpulseResponse\lXCorr" alt="" coords="267,225,491,266"/>
+<area shape="rect" id="node7" href="$d0/def/class_anita_response_1_1_naive_deconvolution.html" title="AnitaResponse::NaiveDeconvolution" alt="" coords="261,291,497,317"/>
+<area shape="rect" id="node8" href="$d1/d31/class_anita_response_1_1_wiener_deconvolution.html" title="AnitaResponse::WienerDeconvolution" alt="" coords="258,341,501,368"/>
+</map>

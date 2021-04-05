@@ -1,0 +1,10 @@
+<map id="Acclaim::SummarySet" name="Acclaim::SummarySet">
+<area shape="rect" id="node2" href="$d1/df5/class_anita_event_summary.html" title="Common analysis format between UCorrelator and Acclaim. " alt="" coords="565,331,708,358"/>
+<area shape="rect" id="node4" href="$d2/dee/class_anita_event_summary_1_1_payload_location.html" title="AnitaEventSummary::\lPayloadLocation" alt="" coords="285,259,436,300"/>
+<area shape="rect" id="node5" href="$dd/d41/class_anita_event_summary_1_1_source_hypothesis.html" title="AnitaEventSummary::\lSourceHypothesis" alt="" coords="5,404,156,445"/>
+<area shape="rect" id="node10" href="$d5/d46/class_anita_event_summary_1_1_m_c_truth.html" title="AnitaEventSummary::\lMCTruth" alt="" coords="285,324,436,365"/>
+<area shape="rect" id="node6" href="$d8/de1/class_anita_event_summary_1_1_waveform_info.html" title="Stores information about a coherently summed waveform (filtered/unfiltered/deconvolved) The coherent ..." alt="" coords="5,127,156,168"/>
+<area shape="rect" id="node7" href="$dc/de1/class_anita_event_summary_1_1_event_flags.html" title="AnitaEventSummary::\lEventFlags" alt="" coords="285,548,436,589"/>
+<area shape="rect" id="node8" href="$d6/dc0/class_anita_event_summary_1_1_channel_info.html" title="AnitaEventSummary::\lChannelInfo" alt="" coords="285,483,436,524"/>
+<area shape="rect" id="node9" href="$d8/dbb/class_anita_event_summary_1_1_pointing_hypothesis.html" title="AnitaEventSummary::\lPointingHypothesis" alt="" coords="285,5,436,47"/>
+</map>

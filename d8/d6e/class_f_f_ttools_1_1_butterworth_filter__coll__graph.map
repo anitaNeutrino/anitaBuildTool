@@ -1,0 +1,5 @@
+<map id="FFTtools::ButterworthFilter" name="FFTtools::ButterworthFilter">
+<area shape="rect" id="node2" href="$d4/d98/class_f_f_ttools_1_1_transformed_z_p_k_filter.html" title="FFTtools::TransformedZPKFilter" alt="" coords="196,292,407,319"/>
+<area shape="rect" id="node3" href="$df/d81/class_f_f_ttools_1_1_i_i_r_filter.html" title="FFTtools::IIRFilter" alt="" coords="237,215,366,241"/>
+<area shape="rect" id="node4" href="$d6/d16/class_f_f_ttools_1_1_digital_filter.html" title="FFTtools::DigitalFilter" alt="" coords="305,102,453,129"/>
+</map>

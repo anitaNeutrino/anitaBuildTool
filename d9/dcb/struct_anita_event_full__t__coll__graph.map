@@ -1,0 +1,8 @@
+<map id="AnitaEventFull_t" name="AnitaEventFull_t">
+<area shape="rect" id="node2" href="$de/d83/struct_anita_event_body__t.html" title="Raw event format. " alt="" coords="321,245,447,272"/>
+<area shape="rect" id="node6" href="$de/d43/struct_generic_header__t.html" title="The Generic Header. " alt="" coords="257,133,377,159"/>
+<area shape="rect" id="node7" href="$d1/d79/struct_anita_event_header__t.html" title="ANITA Event Header – Telemetered. " alt="" coords="104,245,243,272"/>
+<area shape="rect" id="node8" href="$d2/de8/struct_turfio_struct__t.html" title="The TURF I/O struct. " alt="" coords="5,133,107,159"/>
+<area shape="rect" id="node4" href="$db/dc1/struct_surf_channel_full__t.html" title="A complete SURF channel. " alt="" coords="529,133,655,159"/>
+<area shape="rect" id="node5" href="$d2/db9/struct_raw_surf_channel_header__t.html" title="The channel header. " alt="" coords="505,5,679,32"/>
+</map>

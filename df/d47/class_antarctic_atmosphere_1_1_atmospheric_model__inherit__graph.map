@@ -1,0 +1,7 @@
+<map id="AntarcticAtmosphere::AtmosphericModel" name="AntarcticAtmosphere::AtmosphericModel">
+<area shape="rect" id="node2" href="$d8/d44/class_antarctic_atmosphere_1_1_artificial_inversion.html" title="AntarcticAtmosphere\l::ArtificialInversion" alt="" coords="209,5,353,47"/>
+<area shape="rect" id="node3" href="$dc/dd8/class_antarctic_atmosphere_1_1_interpolated_atmosphere.html" title="AntarcticAtmosphere\l::InterpolatedAtmosphere" alt="" coords="197,71,365,112"/>
+<area shape="rect" id="node4" href="$d5/dbb/class_antarctic_atmosphere_1_1_s_p_radiosonde.html" title="AntarcticAtmosphere\l::SPRadiosonde" alt="" coords="209,136,353,177"/>
+<area shape="rect" id="node5" href="$df/d17/class_antarctic_atmosphere_1_1_standard_u_s.html" title="AntarcticAtmosphere\l::StandardUS" alt="" coords="209,201,353,243"/>
+<area shape="rect" id="node6" href="$df/d2c/class_antarctic_atmosphere_1_1_exponential_refractivity.html" title="AntarcticAtmosphere\l::ExponentialRefractivity" alt="" coords="413,201,579,243"/>
+</map>

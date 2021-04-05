@@ -1,0 +1,12 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$d2/dab/class_f_f_ttools_1_1_f_f_t_window_type.html" title="FFTtools::FFTWindowType" alt="" coords="5,223,188,250"/>
+<area shape="rect" id="node2" href="$d0/d08/class_f_f_ttools_1_1_blackman_harris_window.html" title="FFTtools::BlackmanHarris\lWindow" alt="" coords="248,5,423,47"/>
+<area shape="rect" id="node3" href="$d4/d85/class_f_f_ttools_1_1_blackman_window.html" title="FFTtools::BlackmanWindow" alt="" coords="242,71,429,98"/>
+<area shape="rect" id="node4" href="$d7/d73/class_f_f_ttools_1_1_gaussian_window.html" title="FFTtools::GaussianWindow" alt="" coords="243,122,427,149"/>
+<area shape="rect" id="node5" href="$d3/dd1/class_f_f_ttools_1_1_hamming_window.html" title="FFTtools::HammingWindow" alt="" coords="243,173,428,199"/>
+<area shape="rect" id="node6" href="$da/d1a/class_f_f_ttools_1_1_hann_window.html" title="FFTtools::HannWindow" alt="" coords="255,223,415,250"/>
+<area shape="rect" id="node7" href="$d2/d7d/class_f_f_ttools_1_1_kaiser_window.html" title="FFTtools::KaiserWindow" alt="" coords="252,274,419,301"/>
+<area shape="rect" id="node8" href="$dc/d51/class_f_f_ttools_1_1_rectangular_window.html" title="FFTtools::RectangularWindow" alt="" coords="236,325,435,351"/>
+<area shape="rect" id="node9" href="$d9/d15/class_f_f_ttools_1_1_triangular_window.html" title="FFTtools::TriangularWindow" alt="" coords="242,375,429,402"/>
+<area shape="rect" id="node10" href="$da/d26/class_f_f_ttools_1_1_tukey_window.html" title="FFTtools::TukeyWindow" alt="" coords="253,426,418,453"/>
+</map>

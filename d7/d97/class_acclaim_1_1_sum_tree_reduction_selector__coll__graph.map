@@ -1,0 +1,11 @@
+<map id="Acclaim::SumTreeReductionSelector" name="Acclaim::SumTreeReductionSelector">
+<area shape="rect" id="node2" href="$d5/d65/class_acclaim_1_1_summary_selector.html" title="Template TSelector to be inherited from, designed for use with SummarySet. " alt="" coords="573,124,755,151"/>
+<area shape="rect" id="node7" href="$d1/df5/class_anita_event_summary.html" title="Common analysis format between UCorrelator and Acclaim. " alt="" coords="593,481,735,508"/>
+<area shape="rect" id="node9" href="$d2/dee/class_anita_event_summary_1_1_payload_location.html" title="AnitaEventSummary::\lPayloadLocation" alt="" coords="289,657,440,698"/>
+<area shape="rect" id="node10" href="$dd/d41/class_anita_event_summary_1_1_source_hypothesis.html" title="AnitaEventSummary::\lSourceHypothesis" alt="" coords="5,653,156,694"/>
+<area shape="rect" id="node15" href="$d5/d46/class_anita_event_summary_1_1_m_c_truth.html" title="AnitaEventSummary::\lMCTruth" alt="" coords="289,343,440,385"/>
+<area shape="rect" id="node11" href="$d8/de1/class_anita_event_summary_1_1_waveform_info.html" title="Stores information about a coherently summed waveform (filtered/unfiltered/deconvolved) The coherent ..." alt="" coords="5,291,156,333"/>
+<area shape="rect" id="node12" href="$dc/de1/class_anita_event_summary_1_1_event_flags.html" title="AnitaEventSummary::\lEventFlags" alt="" coords="289,409,440,450"/>
+<area shape="rect" id="node13" href="$d6/dc0/class_anita_event_summary_1_1_channel_info.html" title="AnitaEventSummary::\lChannelInfo" alt="" coords="289,474,440,515"/>
+<area shape="rect" id="node14" href="$d8/dbb/class_anita_event_summary_1_1_pointing_hypothesis.html" title="AnitaEventSummary::\lPointingHypothesis" alt="" coords="289,539,440,581"/>
+</map>

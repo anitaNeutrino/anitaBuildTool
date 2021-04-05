@@ -1,0 +1,5 @@
+<map id="Acclaim::Filters::SpectrumMagnitude" name="Acclaim::Filters::SpectrumMagnitude">
+<area shape="rect" id="node2" href="$de/d22/class_acclaim_1_1_filters_1_1_rayleigh_monitor.html" title="Tracks the amplitudes of frequencies but doesn&#39;t do anything else, to be inherited from..." alt="" coords="8,155,180,196"/>
+<area shape="rect" id="node3" href="$d7/d6d/class_uniform_filter_operation.html" title="UniformFilterOperation" alt="" coords="17,80,171,107"/>
+<area shape="rect" id="node4" href="$d2/dc9/class_filter_operation.html" title="FilterOperation" alt="" coords="41,5,147,32"/>
+</map>

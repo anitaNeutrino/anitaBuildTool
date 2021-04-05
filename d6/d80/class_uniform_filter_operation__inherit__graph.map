@@ -1,0 +1,16 @@
+<map id="UniformFilterOperation" name="UniformFilterOperation">
+<area shape="rect" id="node3" href="$d0/ddc/class_acclaim_1_1_filters_1_1_notch.html" title="Filters contiguous frequency bins in the FourierDomain. " alt="" coords="369,5,525,32"/>
+<area shape="rect" id="node4" href="$de/d22/class_acclaim_1_1_filters_1_1_rayleigh_monitor.html" title="Tracks the amplitudes of frequencies but doesn&#39;t do anything else, to be inherited from..." alt="" coords="361,57,533,98"/>
+<area shape="rect" id="node7" href="$d1/d04/class_acclaim_1_1_filters_1_1_uniform_magnitude.html" title="Silly filtering class, don&#39;t use it. " alt="" coords="364,122,531,163"/>
+<area shape="rect" id="node8" href="$df/d46/class_deglitch_filter.html" title="DeglitchFilter" alt="" coords="398,188,497,215"/>
+<area shape="rect" id="node9" href="$dc/d2f/class_digital_filter_operation.html" title="DigitalFilterOperation" alt="" coords="375,239,519,265"/>
+<area shape="rect" id="node10" href="$d1/d26/class_diode_filter.html" title="DiodeFilter" alt="" coords="405,289,490,316"/>
+<area shape="rect" id="node11" href="$db/d48/class_gaussian_taper.html" title="GaussianTaper" alt="" coords="392,340,503,367"/>
+<area shape="rect" id="node12" href="$d3/d5a/class_i_f_f_t_diff_filter.html" title="IFFTDiffFilter" alt="" coords="397,391,497,417"/>
+<area shape="rect" id="node13" href="$d6/d12/class_simple_notch_filter.html" title="SimpleNotchFilter" alt="" coords="384,441,511,468"/>
+<area shape="rect" id="node14" href="$df/d4e/class_simple_pass_band_filter.html" title="SimplePassBandFilter" alt="" coords="372,492,523,519"/>
+<area shape="rect" id="node15" href="$d3/d4e/class_u_correlator_1_1_complicated_notch_filter.html" title="UCorrelator::Complicated\lNotchFilter" alt="" coords="362,543,533,585"/>
+<area shape="rect" id="node2" href="$d2/dc9/class_filter_operation.html" title="FilterOperation" alt="" coords="5,289,112,316"/>
+<area shape="rect" id="node5" href="$d7/d61/class_acclaim_1_1_filters_1_1_rayleigh_filter.html" title="Tracks the amplitudes of frequencies, how well they track a Rayleigh distribution and filters if they..." alt="" coords="584,23,756,65"/>
+<area shape="rect" id="node6" href="$df/dae/class_acclaim_1_1_filters_1_1_spectrum_magnitude.html" title="Silly filtering class, don&#39;t use it. " alt="" coords="581,89,759,130"/>
+</map>

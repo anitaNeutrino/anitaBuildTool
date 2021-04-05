@@ -1,0 +1,5 @@
+<map id="Acclaim::Filters::RayleighFilter" name="Acclaim::Filters::RayleighFilter">
+<area shape="rect" id="node2" href="$de/d22/class_acclaim_1_1_filters_1_1_rayleigh_monitor.html" title="Tracks the amplitudes of frequencies but doesn&#39;t do anything else, to be inherited from..." alt="" coords="5,155,177,196"/>
+<area shape="rect" id="node3" href="$d7/d6d/class_uniform_filter_operation.html" title="UniformFilterOperation" alt="" coords="15,80,168,107"/>
+<area shape="rect" id="node4" href="$d2/dc9/class_filter_operation.html" title="FilterOperation" alt="" coords="38,5,145,32"/>
+</map>

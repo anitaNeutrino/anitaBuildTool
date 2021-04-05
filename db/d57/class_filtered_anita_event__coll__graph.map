@@ -1,0 +1,12 @@
+<map id="FilteredAnitaEvent" name="FilteredAnitaEvent">
+<area shape="rect" id="node3" href="$dd/d81/class_analysis_waveform.html" title="This class is intended to be the main storage vessel for ANITA waveforms. It is similar in principle ..." alt="" coords="657,68,789,95"/>
+<area shape="rect" id="node4" href="$d7/d83/struct_analysis_waveform_1_1_interpolation_options.html" title="AnalysisWaveform::Interpolation\lOptions" alt="" coords="239,17,449,58"/>
+<area shape="rect" id="node7" href="$d9/d4a/class_useful_anita_event.html" title="UsefulAnitaEvent – The Calibrated Useful Anita Event object. " alt="" coords="661,241,785,268"/>
+<area shape="rect" id="node8" href="$d6/d74/class_raw_anita_event.html" title="RawAnitaEvent – The Raw ANITA Event Data. " alt="" coords="287,359,401,385"/>
+<area shape="rect" id="node13" href="$d2/dbf/class_adu5_pat.html" title="Adu5Pat – The ADU5 Position and Attitude Data. " alt="" coords="308,600,380,627"/>
+<area shape="rect" id="node16" href="$d0/dc4/class_raw_anita_header.html" title="RawAnitaHeader – The Raw ANITA Event Header. " alt="" coords="493,393,614,420"/>
+<area shape="rect" id="node11" href="$d0/d11/class_filter_strategy.html" title="A filter strategy defines the sets of filters that are used and provides some introspection abilities..." alt="" coords="958,299,1058,325"/>
+<area shape="rect" id="node12" href="$d7/dfd/class_useful_adu5_pat.html" title="As UsefulAnitaEvent is to RawAnitaEvent, UsefulAdu5Pat is to Adu5Pat. Well not quite as useful but yo..." alt="" coords="668,515,779,541"/>
+<area shape="rect" id="node14" href="$d8/db1/class_anita_geom_tool.html" title="AnitaGeomTool – The ANITA Geometry Tool. " alt="" coords="288,460,400,487"/>
+<area shape="rect" id="node15" href="$df/de1/class_rampdem_reader.html" title="RampdemReader" alt="" coords="282,549,406,576"/>
+</map>

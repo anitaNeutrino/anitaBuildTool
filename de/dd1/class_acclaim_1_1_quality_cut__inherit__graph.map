@@ -1,0 +1,5 @@
+<map id="Acclaim::QualityCut" name="Acclaim::QualityCut">
+<area shape="rect" id="node3" href="$d1/d02/class_acclaim_1_1_num_points_cut.html" title="Removes events which have short waveforms. " alt="" coords="5,155,168,181"/>
+<area shape="rect" id="node4" href="$da/d7a/class_acclaim_1_1_payload_blast_cut.html" title="Tries to determine whether an event is a payload blast. " alt="" coords="193,155,367,181"/>
+<area shape="rect" id="node5" href="$d2/db6/class_acclaim_1_1_surf_saturation_cut.html" title="Tries to find unphysical spikes in a waveform that are characteristic of a kind of digitiser corrupti..." alt="" coords="392,155,573,181"/>
+</map>

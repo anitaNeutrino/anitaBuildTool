@@ -1,0 +1,55 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$d8/d12/class_acclaim_1_1_analysis_flow.html" title="High level interface to join up the various bits of the analysis. " alt="" coords="135,5,290,32"/>
+<area shape="rect" id="node3" href="$db/d33/class_acclaim_1_1_analysis_reco.html" title="Does the event reconstruction, and produces a summary of it. " alt="" coords="133,56,292,83"/>
+<area shape="rect" id="node4" href="$dd/d62/class_acclaim_1_1_quality_cut.html" title="Base class from which all my quality cuts inherit. " alt="" coords="143,107,282,133"/>
+<area shape="rect" id="node8" href="$d7/dd9/class_acqd_start.html" title="AcqdStart – The Acqd Start Struct. " alt="" coords="173,157,253,184"/>
+<area shape="rect" id="node9" href="$d2/dbf/class_adu5_pat.html" title="Adu5Pat – The ADU5 Position and Attitude Data. " alt="" coords="177,208,249,235"/>
+<area shape="rect" id="node11" href="$df/d46/class_adu5_sat.html" title="Adu5Sat – The ADU5 Satellite Information. " alt="" coords="177,259,249,285"/>
+<area shape="rect" id="node12" href="$d2/dc9/class_adu5_vtg.html" title="Adu5Vtg – The ADU5 Velocity and Course Information. " alt="" coords="177,309,249,336"/>
+<area shape="rect" id="node13" href="$d7/d7d/class_anita_event_calibrator.html" title="AnitaEventCalibrator – The ANITA Event Calibrator. " alt="" coords="141,360,284,387"/>
+<area shape="rect" id="node14" href="$d1/df5/class_anita_event_summary.html" title="Common analysis format between UCorrelator and Acclaim. " alt="" coords="141,411,284,437"/>
+<area shape="rect" id="node15" href="$da/d2a/class_anita_template_machine.html" title="AnitaTemplateMachine" alt="" coords="135,461,290,488"/>
+<area shape="rect" id="node16" href="$d8/dd7/class_averaged_surf_hk.html" title="AveragedSurfHk – The Averaged SURF Housekeeping data. " alt="" coords="153,512,272,539"/>
+<area shape="rect" id="node17" href="$d2/d6b/class_calibrated_hk.html" title="CalibratedHk – The calibrated housekeeping data. " alt="" coords="163,563,262,589"/>
+<area shape="rect" id="node18" href="$db/d72/class_calibrated_s_s_hk.html" title="CalibratedSSHk – The calibrated housekeeping data. " alt="" coords="155,613,271,640"/>
+<area shape="rect" id="node19" href="$dc/d9a/class_command_echo.html" title="CommandEcho – The command echo data. " alt="" coords="157,664,269,691"/>
+<area shape="rect" id="node20" href="$d7/daa/class_correlation_summary.html" title="This is a poorly thought out class that was meant to be a summary of peaks of the correlations of som..." alt="" coords="142,715,283,741"/>
+<area shape="rect" id="node21" href="$dd/d75/class_correlation_summary_anita3.html" title="This is a poorly thought out class that was meant to be a summary of peaks of the correlations of som..." alt="" coords="123,765,302,792"/>
+<area shape="rect" id="node22" href="$de/d8a/class_correlation_summary_anita4.html" title="This is a poorly thought out class that was meant to be a summary of peaks of the correlations of som..." alt="" coords="123,816,302,843"/>
+<area shape="rect" id="node23" href="$db/dc5/class_g12_pos.html" title="G12Pos – The position data from the G12. " alt="" coords="178,867,247,893"/>
+<area shape="rect" id="node24" href="$d4/d0c/class_g12_sat.html" title="G12Sat – The satellite data from the G12. " alt="" coords="179,917,246,944"/>
+<area shape="rect" id="node25" href="$d1/dac/class_gpsd_start.html" title="GpsdStart – The start up packet for GPSd. " alt="" coords="172,968,253,995"/>
+<area shape="rect" id="node26" href="$df/dcc/class_gps_gga.html" title="GpsGga – GPS Geoid Data. " alt="" coords="177,1019,248,1045"/>
+<area shape="rect" id="node27" href="$d6/dbb/class_gpu_power_spectra.html" title="GpuPowerSpectra – The GPU Power Specta Data. " alt="" coords="149,1069,277,1096"/>
+<area shape="rect" id="node28" href="$dd/d6a/class_log_watchd_start.html" title="LogWatchdStart – The start packet from LogWatchd. " alt="" coords="155,1120,271,1147"/>
+<area shape="rect" id="node29" href="$de/dd5/class_monitor_hk.html" title="MonitorHk – The CPU Monitor data. " alt="" coords="171,1171,254,1197"/>
+<area shape="rect" id="node30" href="$da/d82/class_other_monitor_hk.html" title="OtherMonitorHk – The other CPU Monitor data. " alt="" coords="155,1221,270,1248"/>
+<area shape="rect" id="node31" href="$da/dc7/class_pretty_anita_hk.html" title="PrettyAnitaHk – The prettified ANITA Hk. " alt="" coords="161,1272,265,1299"/>
+<area shape="rect" id="node32" href="$d6/d74/class_raw_anita_event.html" title="RawAnitaEvent – The Raw ANITA Event Data. " alt="" coords="156,1323,269,1349"/>
+<area shape="rect" id="node36" href="$d0/dc4/class_raw_anita_header.html" title="RawAnitaHeader – The Raw ANITA Event Header. " alt="" coords="152,1373,273,1400"/>
+<area shape="rect" id="node38" href="$d7/d0e/class_raw_hk.html" title="RawHk – The Raw ANITA Housekeeping. " alt="" coords="179,1424,246,1451"/>
+<area shape="rect" id="node39" href="$d0/d91/class_raw_s_s_hk.html" title="RawSSHk – The Raw ANITA Housekeeping. " alt="" coords="171,1475,255,1501"/>
+<area shape="rect" id="node40" href="$d5/dc4/class_r_t_l_spectrum.html" title="RTLSpectrum" alt="" coords="161,1525,264,1552"/>
+<area shape="rect" id="node41" href="$de/dbd/class_run_start.html" title="RunStart – The Run start data. " alt="" coords="175,1576,250,1603"/>
+<area shape="rect" id="node42" href="$df/d22/class_r_x.html" title="RX" alt="" coords="192,1627,233,1653"/>
+<area shape="rect" id="node43" href="$db/d2b/class_settings.html" title="Reads in and stores input settings for the run. " alt="" coords="177,1677,248,1704"/>
+<area shape="rect" id="node44" href="$d6/df2/class_sky_map.html" title="SkyMap" alt="" coords="177,1728,248,1755"/>
+<area shape="rect" id="node45" href="$dd/d4e/class_slow_rate.html" title="SlowRate – The Slow Rate data. " alt="" coords="173,1779,252,1805"/>
+<area shape="rect" id="node46" href="$de/dc6/class_summed_turf_rate.html" title="SummedTurfRate – The Summed Turf Rate data. " alt="" coords="150,1829,275,1856"/>
+<area shape="rect" id="node47" href="$d2/df0/class_surf_hk.html" title="SurfHk – The raw SURF scaler+threshold data. " alt="" coords="181,1880,244,1907"/>
+<area shape="rect" id="node48" href="$d6/dc1/class_taumodel.html" title="Taumodel" alt="" coords="173,1931,252,1957"/>
+<area shape="rect" id="node49" href="$d7/dd8/class_truth_anita_event.html" title="TruthAnitaEvent – The Truth ANITA Event. " alt="" coords="155,1981,271,2008"/>
+<area shape="rect" id="node50" href="$d6/d7f/class_tuff_notch_status.html" title="TuffNotchStatus" alt="" coords="153,2032,272,2059"/>
+<area shape="rect" id="node51" href="$dd/d7f/class_tuff_raw_cmd.html" title="TuffRawCmd" alt="" coords="163,2083,263,2109"/>
+<area shape="rect" id="node52" href="$d1/dfe/class_turf_rate.html" title="TurfRate – The Turf Rate data. " alt="" coords="176,2133,249,2160"/>
+<area shape="rect" id="node53" href="$dc/d78/class_turf_register_contents.html" title="TurfRegisterContents – The Turf Register Contents. " alt="" coords="139,2184,286,2211"/>
+<area shape="rect" id="node54" href="$d2/d19/class_u_correlator_1_1_probability_map.html" title="UCorrelator::ProbabilityMap" alt="" coords="121,2235,304,2261"/>
+<area shape="rect" id="node5" href="$d1/d02/class_acclaim_1_1_num_points_cut.html" title="Removes events which have short waveforms. " alt="" coords="361,56,524,83"/>
+<area shape="rect" id="node6" href="$da/d7a/class_acclaim_1_1_payload_blast_cut.html" title="Tries to determine whether an event is a payload blast. " alt="" coords="355,107,530,133"/>
+<area shape="rect" id="node7" href="$d2/db6/class_acclaim_1_1_surf_saturation_cut.html" title="Tries to find unphysical spikes in a waveform that are characteristic of a kind of digitiser corrupti..." alt="" coords="352,157,533,184"/>
+<area shape="rect" id="node10" href="$d7/dfd/class_useful_adu5_pat.html" title="As UsefulAnitaEvent is to RawAnitaEvent, UsefulAdu5Pat is to Adu5Pat. Well not quite as useful but yo..." alt="" coords="387,208,498,235"/>
+<area shape="rect" id="node33" href="$dc/ddc/class_calibrated_anita_event.html" title="CalibratedAnitaEvent – The Calibrated Calibrated Anita Event object. " alt="" coords="370,1272,515,1299"/>
+<area shape="rect" id="node34" href="$d9/d4a/class_useful_anita_event.html" title="UsefulAnitaEvent – The Calibrated Useful Anita Event object. " alt="" coords="381,1323,505,1349"/>
+<area shape="rect" id="node35" href="$d0/d63/class_pretty_anita_event.html" title="This is the event class, inherited from UsefulAnitaEvent, that has a number of correlation related me..." alt="" coords="581,1323,703,1349"/>
+<area shape="rect" id="node37" href="$da/d90/class_timed_anita_header.html" title="TimedAnitaHeader – Anita Header withe new time. " alt="" coords="377,1373,508,1400"/>
+</map>

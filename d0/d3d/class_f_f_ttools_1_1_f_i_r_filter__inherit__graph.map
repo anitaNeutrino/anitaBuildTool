@@ -1,0 +1,9 @@
+<map id="FFTtools::FIRFilter" name="FFTtools::FIRFilter">
+<area shape="rect" id="node3" href="$d8/d43/class_f_f_ttools_1_1_box_filter.html" title="FFTtools::BoxFilter" alt="" coords="413,5,548,32"/>
+<area shape="rect" id="node4" href="$d9/d59/class_f_f_ttools_1_1_difference_filter.html" title="FFTtools::DifferenceFilter" alt="" coords="395,56,566,83"/>
+<area shape="rect" id="node5" href="$dd/d18/class_f_f_ttools_1_1_gaussian_filter.html" title="FFTtools::GaussianFilter" alt="" coords="397,107,564,133"/>
+<area shape="rect" id="node6" href="$d9/dce/class_f_f_ttools_1_1_lanczos_filter.html" title="FFTtools::LanczosFilter" alt="" coords="401,157,561,184"/>
+<area shape="rect" id="node7" href="$d1/d50/class_f_f_ttools_1_1_savitzky_golay_filter.html" title="FFTtools::SavitzkyGolayFilter" alt="" coords="383,208,579,235"/>
+<area shape="rect" id="node8" href="$d4/dff/class_f_f_ttools_1_1_sinc_filter.html" title="FFTtools::SincFilter" alt="" coords="412,259,549,285"/>
+<area shape="rect" id="node2" href="$d6/d16/class_f_f_ttools_1_1_digital_filter.html" title="FFTtools::DigitalFilter" alt="" coords="5,132,153,159"/>
+</map>
